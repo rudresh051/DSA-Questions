@@ -47,7 +47,7 @@ function runProgram(input) {
 
 if (process.env.USER === "") {
   runProgram(``);
-} else {ro
+} else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");
   let read = "";

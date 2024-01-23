@@ -6,6 +6,9 @@ function runProgram(input) {
     var arr1 = input1.shift()
     // console.log("input1",input1)
     var opsStack = []
+    
+    
+    
     for(var i=0;i<=input1.length-1;i++){
         // console.log("input1[i]",input1[i])
         var temp = input1[i].split(" ")
