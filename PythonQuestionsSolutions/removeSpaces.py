@@ -9,6 +9,6 @@ class Solution:
                 continue
             else:
                 arr.append(x)
-        
+
         arr1 = "".join(arr)
         return arr1
