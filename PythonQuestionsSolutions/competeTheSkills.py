@@ -19,12 +19,9 @@
             
         return cc[0],cc[1]
         
-        
-    	
-
 
 #{ 
- # Driver Code Starts
+# Driver Code Starts
 #Initial Template for Python 3
 
 
