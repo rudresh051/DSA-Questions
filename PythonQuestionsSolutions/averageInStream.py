@@ -12,7 +12,7 @@ class Solution:
             res.append(mean)
             count = count+1
 
-      	return res
+        return res
 
 #{ 
  # Driver Code Starts
