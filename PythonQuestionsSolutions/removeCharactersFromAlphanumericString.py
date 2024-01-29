@@ -2,7 +2,7 @@
 class Solution:
     def removeCharacters(self, S):
         # code here
-        res = []
+        '''res = []
         num = [1,2,3,4,5,6,7,8,9,0]
         num_str = ''.join(map(str, num))  # Convert each digit to string and concatenate
 
@@ -15,7 +15,22 @@ class Solution:
                 continue
 
        # return res
-        return "".join(res)
+        return "".join(res)'''
+
+            #Method 2
+            res = []
+            num_set = set('1234567890')
+
+            for i in range(len(S)):
+                if S[i] in num_set:
+                    res.append(S[i])
+                else:
+                    continue
+
+            return "".join(res)
+    
+
+
 
 
 #{ 
