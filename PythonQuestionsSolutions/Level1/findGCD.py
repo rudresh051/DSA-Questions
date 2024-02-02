@@ -6,6 +6,19 @@ class Solution:
         
         temp = math.gcd(A,B)
         return temp
+    
+
+        # Method 2
+        # if A>B:
+        #     min = B
+        # else:
+        #     min=A
+            
+        # for i in range(1,min+1):
+        #     if A%i==0 and B%i==0:
+        #         hcf=i
+        
+        # return hcf
 
 
 #{ 
