@@ -1,11 +1,14 @@
 # *
-# * *
 # * * *
-# * * * *
 # * * * * *
 
-num = int(input("enter the number of rows"))
+# here we can see there is no change in rows
+# There is change in columns
+
+num = int(input("Enter the number of rows"))
+k=1
 for i in range(1,num+1):
-  for j in range(1,i+1):
+  for j in range(1,k+1):
     print("*",end=" ")
-  print() # This print will give the new line
+  k=k+2
+  print()
