@@ -17,10 +17,10 @@ class Solution:
 
         if dotValue==0:
             return 2
-      	elif crossValueSquare==0:
-          	return 1
-    	else:
-        	return 0
+        elif crossValueSquare==0:
+            return 1
+        else:
+            return 0
 
 
 #{ 
