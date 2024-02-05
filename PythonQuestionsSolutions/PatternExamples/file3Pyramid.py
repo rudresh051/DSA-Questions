@@ -1,3 +1,9 @@
+#     *
+#    * *
+#   * * *
+#  * * * *
+# * * * * *
+
 num = int(input("Enter the number of rows"))
 #Method1
 for i in range(0,num):
