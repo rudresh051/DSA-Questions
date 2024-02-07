@@ -4,19 +4,19 @@ class Solution:
     def getPairsCount(self, arr, n, k):
         # code here
         # print("k",k)
-        
-        i=0
-        j=i+1
+        # print("n",n)
+        # print(len(arr)-1)
         count = 0
-        for i in range(len(arr)):
-            # print("arr[i]",arr[i])
-            for j in range(len(arr)-2):
+        for i in range(len(arr)):#0,1,2,3
+            # print("i",i)
+            x = 0
+            x = x+i
+            for j in range(x+1,len(arr),1):
+                # print("j",j)
                 if arr[i]+arr[j]==k:
-                    print("arr[i] an arr[j] values are", arr[i],arr[j])
-                    count=count+1
+                    count = count+1
                 else:
                     continue
-        
         return count
                 
 
