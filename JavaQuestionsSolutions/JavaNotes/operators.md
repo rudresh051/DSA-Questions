@@ -65,5 +65,12 @@ public class operators {
 }
 
 ```  
-
+**Output**
+```
+a&b = 5
+a|b = 7
+a^b = 2
+~a = -6
+a= 5
+```
 
