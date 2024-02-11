@@ -60,3 +60,21 @@ float f1 = 35e3f;
 double d1 = 12E4d;
 ```  
 
+# Java Boolean Data Types
+Java has a boolean data type, which can only take the values true or false:
+```
+boolean isJavaFun = true;
+boolean isFishTasty = false;
+```  
+# Java Characters
+The char data type is used to store a single character.   
+The character must be surrounded by single quotes, like 'A' or 'c':
+
+`char myGrade = 'B';`
+
+`char myVar1 = 65, myVar2 = 66, myVar3 = 67;`  
+
+# Java Strings
+The String data type is used to store a sequence of characters (text).  
+String values must be surrounded by double quotes:  
+`String greeting = "Hello World";`
