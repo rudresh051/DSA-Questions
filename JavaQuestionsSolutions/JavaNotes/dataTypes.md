@@ -60,13 +60,13 @@ float f1 = 35e3f;
 double d1 = 12E4d;
 ```  
 
-# Java Boolean Data Types
+## Java Boolean Data Types
 Java has a boolean data type, which can only take the values true or false:
 ```
 boolean isJavaFun = true;
 boolean isFishTasty = false;
 ```  
-# Java Characters
+### Java Characters
 The char data type is used to store a single character.   
 The character must be surrounded by single quotes, like 'A' or 'c':
 
@@ -74,7 +74,20 @@ The character must be surrounded by single quotes, like 'A' or 'c':
 
 `char myVar1 = 65, myVar2 = 66, myVar3 = 67;`  
 
-# Java Strings
+### Java Strings
 The String data type is used to store a sequence of characters (text).  
 String values must be surrounded by double quotes:  
 `String greeting = "Hello World";`
+
+# Non Primitive Data types
+Non-primitive data types are called reference types because they refer to objects.
+
+The main difference between primitive and non-primitive data types are:
+
+* Primitive types are predefined (already defined) in Java.  
+ Non-primitive types are created by the programmer and is not defined by Java (except for String).
+* Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.
+* A primitive type has always a value, while non-primitive types can be null.
+* A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.
+
+Examples of non-primitive types are Strings, Arrays, Classes, Interface,
