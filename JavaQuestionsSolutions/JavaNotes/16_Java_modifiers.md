@@ -40,3 +40,68 @@ This is used when you don't specify a modifier.
         }
     }
 ```
+
+**For attributes, methods and constructors** we can use the following modifier
+1. `public` - The code is accessible for all classes  
+e.g. 
+```
+public class Main {
+  public String fname = "John";
+  public String lname = "Doe";
+  public String email = "john@doe.com";
+  public int age = 24;
+}
+```
+2. `private` - The code is only accessible within the declared class  
+e.g. 
+```
+public class Main {
+  private String fname = "John";
+  private String lname = "Doe";
+  private String email = "john@doe.com";
+  private int age = 24;
+  
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    System.out.println("Name: " + myObj.fname + " " + myObj.lname);
+    System.out.println("Email: " + myObj.email);
+    System.out.println("Age: " + myObj.age);
+  }
+}
+```
+3. default - The code is only accessible in the same package.  
+e.g. 
+```
+class Person {
+  String fname = "John";
+  String lname = "Doe";
+  String email = "john@doe.com";
+  int age = 24;
+  
+  public static void main(String[] args) {
+    Person myObj = new Person();
+    System.out.println("Name: " + myObj.fname + " " + myObj.lname);
+    System.out.println("Email: " + myObj.email);
+    System.out.println("Age: " + myObj.age);
+  }
+}
+```
+4. Protected - The code is accessible in the same package and subclasses  
+e.g.
+```
+class Person{
+    protected String fname = "John";
+    protected String lname = "Doe";
+    protected String email = "john@doe.com";
+    protected int age = 24;
+}
+class Student extends Person{
+    private int graduationYear = 2018;
+    public static void main(String[] args){
+        Student myObj = new Student();
+        System.out.println("Name: " + myObj.fname + " " + myObj.lname);
+        System.out.println("Email: " + myObj.email);
+        System.out.println("Graduation Year: " + myObj.graduationYear);
+    }
+}
+```
