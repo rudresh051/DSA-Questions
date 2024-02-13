@@ -150,14 +150,14 @@ class Student extends Main {
 
 For **attributes and methods**, you can use the one of the following:
 
-1. final - Attributes and methods cannot be overridden/modified
-2. static - Attributes and methods belongs to the class, rather than an object
-3. abstract - can only used in an abstract class, and can only be used on methods
-4. transient - Attributes and methods are skipped when serializing the object containing them
-5. synchronized - Methods can only be accessed by one thread at a time
-6. volatile - The value of an attribute is not cached thread-locally, and is always read from the "main memory"
+1. **final** - Attributes and methods cannot be overridden/modified
+2. **static** - Attributes and methods belongs to the class, rather than an object
+3. **abstract** - can only used in an abstract class, and can only be used on methods
+4. **transient** - Attributes and methods are skipped when serializing the object containing them
+5. **synchronized** - Methods can only be accessed by one thread at a time
+6. **volatile** - The value of an attribute is not cached thread-locally, and is always read from the "main memory"
 
-# Final
+### Final
 
 If you don't want the ability to override existing attribute values, declare attributes as final:
 
@@ -175,7 +175,7 @@ public class Main {
 }
 ```
 
-# Static 
+### Static 
 A static method means that it can be accessed without creating an object of the class, unlike public:  
 Check below example to understand difference betwenn static and public 
 ```
@@ -199,4 +199,39 @@ public class Main {
     myObj.myPublicMethod(); // Call the public method
   }
 }
+```
+### Abstract
+An `abstract` method belongs to an `abstract` class and it does not have a body.
+e.g.
+```
+// Code from filename: Main.java
+// abstract class
+abstract class Main {
+  public String fname = "John";
+  public int age = 24;
+  public abstract void study(); // abstract method
+}
+
+// Subclass (inherit from Main)
+class Student extends Main {
+  public int graduationYear = 2018;
+  public void study() { // the body of the abstract method is provided here
+    System.out.println("Studying all day long");
+  }
+}
+// End code from filename: Main.java
+
+// Code from filename: Second.java
+class Second {
+  public static void main(String[] args) {
+    // create an object of the Student class (which inherits attributes and methods from Main)
+    Student myObj = new Student();
+
+    System.out.println("Name: " + myObj.fname);
+    System.out.println("Age: " + myObj.age);
+    System.out.println("Graduation Year: " + myObj.graduationYear);
+    myObj.study(); // call abstract method
+  }
+}
+
 ```
