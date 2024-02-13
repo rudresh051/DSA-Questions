@@ -105,3 +105,54 @@ class Student extends Person{
     }
 }
 ```
+
+# Non-Access Modifiers
+For classes, you can use either `final` or `abstract`
+
+1. **final** - The class cannot be inherited by other classes  
+e.g.
+```
+final class Vehicle {
+  protected String brand = "Ford";
+  public void honk() {
+    System.out.println("Tuut, tuut!");
+  }
+}
+
+class Main extends Vehicle {
+  private String modelName = "Mustang";
+  public static void main(String[] args) {
+    Main myFastCar = new Main();
+    myFastCar.honk();
+    System.out.println(myFastCar.brand + " " + myFastCar.modelName);
+  }
+}
+```
+2. **abstract** - The class cannot be used to create objects  
+e.g. 
+
+```
+// abstract class
+abstract class Main {
+  public String fname = "John";
+  public String lname = "Doe";
+  public String email = "john@doe.com";
+  public int age = 24;
+  public abstract void study(); // abstract method 
+}
+
+// Subclass (inherit from Person)
+class Student extends Main {
+  public int graduationYear = 2018;
+  public void study() {
+  
+```
+
+For **attributes and methods**, you can use the one of the following:
+
+1. final - Attributes and methods cannot be overridden/modified
+2. static - Attributes and methods belongs to the class, rather than an object
+3. abstract - can only used in an abstract class, and can only be used on methods
+4. transient - Attributes and methods are skipped when serializing the object containing them
+5. synchronized - Methods can only be accessed by one thread at a time
+6. volatile - The value of an attribute is not cached thread-locally, and is always read from the "main memory"
