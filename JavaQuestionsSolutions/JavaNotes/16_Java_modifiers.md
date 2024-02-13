@@ -156,3 +156,22 @@ For **attributes and methods**, you can use the one of the following:
 4. transient - Attributes and methods are skipped when serializing the object containing them
 5. synchronized - Methods can only be accessed by one thread at a time
 6. volatile - The value of an attribute is not cached thread-locally, and is always read from the "main memory"
+
+# Final
+
+If you don't want the ability to override existing attribute values, declare attributes as final:
+
+```
+public class Main {
+  final int x = 10;
+  final double PI = 3.14;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    myObj.x = 50; // will generate an error: cannot assign a value to a final variable
+    myObj.PI = 25; // will generate an error: cannot assign a value to a final variable
+    System.out.println(myObj.x);
+  }
+}
+```
+
