@@ -19,3 +19,27 @@ We use packages to avoid name conflicts, and to write a better maintainable code
 import package.name.Class;   // Import a single class
 import package.name.*;   // Import the whole package
 ```
+
+## Import a Class
+If you find a class you want to use, for example, the Scanner class, which is used to get user input, write the following code.  
+e.g.   
+`import java.util.Scanner;`
+
+## Import a Package
+To import a whole package, end the sentence with an asterisk sign (*)
+e.g. `import java.util.*;`
+## User defined Packages
+
+To create a package, use the `package` keyword:
+e.g. 
+```
+package mypack;
+
+class MyPackageClass { 
+  public static void main(String[] args) { 
+    System.out.println("This is my package!"); 
+  } 
+}
+```
+
+
