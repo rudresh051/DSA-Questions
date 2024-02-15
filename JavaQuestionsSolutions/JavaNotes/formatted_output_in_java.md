@@ -1,4 +1,9 @@
 # Formatted Output in Java using printf()
+**Syntax**  
+1. An optional method to control, format, and display text to the console window  
+2. two arguments = format string + (object/variable/value)
+3. % [flags] [precision] [width] [conversion-character]
+
 
 ## Formatting Using Java Printf()
 printf() uses format specifiers for formatting. There are certain data types are mentioned below:
@@ -64,5 +69,33 @@ Output
 3.141593
 3.142
  3.14
+
+```
+### For Boolean Formatting
+Boolean Formatting can be done using printf and ( ‘%b’ or ‘%B’ ) depending upon the result needed.  
+
+e.g.  
+```
+// Java Programs to demonstrate 
+// Use of Printf() for decimal 
+// Boolean Formatting 
+import java.io.*; 
+
+// Driver Function 
+class GFG { 
+	// main function 
+	public static void main(String[] args) 
+	{ 
+		int a = 10; 
+		Boolean b = true, c = false; 
+		Integer d = null; 
+
+		// Fromatting Done using printf 
+		System.out.printf("%b\n", a); 
+		System.out.printf("%B\n", b); 
+		System.out.printf("%b\n", c); 
+		System.out.printf("%B\n", d); 
+	} 
+}
 
 ```
