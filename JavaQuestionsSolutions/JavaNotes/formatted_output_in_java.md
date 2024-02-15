@@ -34,4 +34,35 @@ class GFG {
 Output
 10,000
 ```
+### For Decimal Number Formatting
+Decimal Number Formatting can be done using print() and format specifier %f .
 
+e.g. 
+```
+// Java Programs to demonstrate 
+// Use of Printf() for decimal 
+// Number Formatting 
+import java.io.*; 
+
+// Driver Class 
+class GFG { 
+	// main function 
+	public static void main(String[] args) 
+	{ 
+		// declaring double 
+		double a = 3.14159265359; 
+
+		// Printing Double Value with 
+		// different Formatting 
+		System.out.printf("%f\n", a); 
+		System.out.printf("%5.3f\n", a); 
+		System.out.printf("%5.2f\n", a); 
+	} 
+}
+
+Output
+3.141593
+3.142
+ 3.14
+
+```
