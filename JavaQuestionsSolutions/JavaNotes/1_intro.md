@@ -67,6 +67,49 @@ JRE = (JVM + Predefined Library classes)
 | Usage           | Used by developers for writing, compiling, and debugging Java code. | Used by end-users to run Java applications. | Used by end-users to execute Java programs without development capabilities. |
 | Example         | Developers use JDK to create and compile Java applications. | End-users use JVM to run Java applications on their systems. | End-users install JRE to run Java programs without needing development tools. |
 
+## Basic steps to develop a Java Program:
+1. Develop the Java program - Java Program developed with ".java" extension.
+2. The Java compiler "Javac" translates the Java program into classes with extension .class. Class files are in byte code format.
+3. The java interpreter "Java" converts the Java class byte codes into native code and executes it.
+
+### There are two phases involved in Java application execution.
+1. Compilation phase
+2. Execution phase
+
+* In the Compilation phase, IntelliJ uses the java compiler to compile our code into a  
+different format called Java **byte-code**.  
+This java compiler comes with the JDK software.
+* This java byte-code, is platform-independent, which means it can run on the Window,  
+Mac, Linux, or any Operating-system that has **JRE (Java Runtime Environment)**.  
+We can also download this JRE, for various Operating-system separately.
+* This JRE has a software component called JVM (Java Virtual Machine), this JVM  
+takes our java byte-code and translates it to the native code for the underlying OS.
+
+> If we are in the Window Operating-system, this JVM will convert our java byte-code to
+the window Operating-system understandable native code, and if we are in the Linux
+environment, then this JVM will convert our java byte-code to the Linux OS
+understandable native code. with this architecture only, our java applications are
+portable or platform-independent.
+We can write a java program on a Window machine and can execute it in a Linux
+or macOS or any other OS that have JRE.
+
+### Important points to note
+1. Some method returns some value, whereas some method doesnot return any value.  
+The method which doesnot return any value we apply `void` as a return type.
+2. `void` is a reserved keyword in java.
+3. The method name should be proper and descriptive.
+```
+void calculateAge(){
+
+}
+```
+4. **Every java program should have atlease one method. And that method is called the main method.  
+The main method is an entry point of our java application.**
+5. Whenever we execute a java program, the main function gets called and the code inside this main method gets executed.
+This methods don't exist as their own, they always belong to a class.
+**A class is like a container, of one or more methods.**
+6. We use the class to orgainze our code in the java application.  
+Every java program should have atlease one class, which contains the main method.
 
 
 
