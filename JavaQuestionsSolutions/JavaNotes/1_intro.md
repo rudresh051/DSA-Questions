@@ -48,6 +48,13 @@ a heap memory management system.
 
 5. **Multithreaded** - Java supports multithreading to enhance performance
 
+## JDK or Java SDK
+Java Standard Edition comes in the form of specification, and the implementation of this   
+specification is the JDK software, also known as Java SDK (Java Standard Development kit).  
+**This JDK is used for developing and executing Java applications.**
+
+![Alt text](image-1.png)
+
 
 
 
