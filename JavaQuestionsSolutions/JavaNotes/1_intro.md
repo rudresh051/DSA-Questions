@@ -111,6 +111,42 @@ This methods don't exist as their own, they always belong to a class.
 6. We use the class to orgainze our code in the java application.  
 Every java program should have atlease one class, which contains the main method.
 
+### Java Program
+e.g.  
+Main.java
+```
+public class Main{
+    public static void main(String[] args){
+        System.out.println("Hello world");
+    }
+}
+```
+1. `Class` is keyword and in Java all the classes and methods should have an access modifier.  
+2. An access modifier is a special keyword that determines if other classes and methods in this program can access  
+ these classes and methods.  
+3. We have various access modifiers like public, private etc. Most of the time we use public access modifier.
+4. So the basic structure of a java program contains a class and inside the class, we have a main method
+5. To name our classes we use **P**ascal**N**aming**C**onvention(first letter of every word in uppercase)  
+And to name our methods we use **c**amel**N**aming**C**onvention
+6. Inside java programming, we have a concept called a package. we use the  
+package to group related classes, so as our application grows, we are going to  
+end up with many classes, so we should properly organize these classes inside  
+different packages.  
+By convention , the base package for a java project is the domain name of your company in reverse. e.g. com.geeksforgeeks  
+So every class we create in java application should belong to a package  
+7. All java files should have a .java extension. and every statement in the java
+application should be terminated with a semicolon ;  
+8. The **static** is a keyword. For now just remember the main method in our program should always be static.
+9. `System.out.println("Hello World");`
+Here System is a predefined java class, which belongs to java.lang package. inside  
+this class, we have various members, out is a member (field) who belongs to this  
+System class.
+the type of this out field is the PrintStream class. this PrintStream is another  
+predefined class in java. the println method belongs to this PrintStream class. 
+
+So here we are calling or executing the println method inside our main method.
+ 
+
 
 
 
