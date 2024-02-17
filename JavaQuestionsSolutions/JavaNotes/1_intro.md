@@ -10,7 +10,7 @@ Coffee, that’s why its logo looks like a cup of coffee.
 
 ## Java Edition
 We have 3 editions of Java for building a different kinds of applications
-1. Java Standard Edition (JSE)
+1. **Java Standard Edition (JSE)**
 ```
 This is the core Java platform, it is a specification, which contains the core libraries to
 develop standalone, networking, database, GUI, multithreaded types of applications.
@@ -20,9 +20,33 @@ development tools, deployment technologies and other class libraries and toolkit
 commonly used in Java application
 
 ```
-2. Java Enterprise Edition (JEE)
-3. Java Micro Edition (JME)
+2. **Java Enterprise Edition (JEE)**
+```
+The Java EE platform provides an API and runtime environment for developing and
+running large-scale, multi-tiered, scalable, reliable, and secure network applications.
+```
+3. **Java Micro Edition (JME)**
+```
+It is a subset of Java SE, designed used for microdevices and embedded development
+like mobile phones, sensors, micro-controller, TV set-top boxes etc.
 
+```
+## Features of Java
+1. **Object-Oriented** - Java is object oriented, it supports all the OOPS characteristics.  
+This makes java applications easy to develop and maintain, compared to structured  
+programming language
+
+2. **Portable and Platform Independent** - Java source code is compiled and  
+converted into bytecode. this bytecode can run on multiple platforms i.e. Write Once  
+and Run Anywhere(WORA), we can compile the java code in one Operating  
+System and execute it on another Operating System.  
+
+3. **Secure** - Java has provided an implicit component inside JVM in the form of a "Security Manager" to provide implicit security against malicious code.
+
+4. **Robust** - Java is having a very good memory management system in the form of  
+a heap memory management system.
+
+5. **Multithreaded** - Java supports multithreading to enhance performance
 
 
 
