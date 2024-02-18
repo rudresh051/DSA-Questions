@@ -116,3 +116,24 @@ public class Main{
     }
 }
 ```
+
+* Sort an ArrayList of Integers:
+```
+import java.util.ArrayList;
+import java.util.Collections; // Import the Collections class
+
+public class Main{
+    public static void main(String[] args){
+        ArrayList<Integer> myNumbers = new ArrayList<Integer>();
+        myNumbers.add(33);
+        myNumbers.add(15);
+        myNumbers.add(20);
+        myNumbers.add(50);
+
+        Collections.sort(myNumbers);
+        for (int i: myNumbers){
+            System.out.println(i)
+        }
+    }
+}
+```
