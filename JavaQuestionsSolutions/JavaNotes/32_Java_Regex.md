@@ -47,5 +47,43 @@ Matcher object which contains information about the search that was performed.
 The `find()` method returns true if the pattern was found in the string and false  
 if it was not found
 
+## Flags
+Flags in the `compile()` method change how the search is performed. Here are a few of them:
+* `Pattern.CASE_INSENSITIVE` - The case of letters will be ignored when performing a search
+* `Pattern.LITERAL` - Special characters in the pattern will not have any special meaning and will be treated as ordinary characters when performing a search.
+* `Pattern.UNICODE_CASE` - Use it together with the `CASE_INSENSITIVE` flag to also ignore the case of letters outside of the English alphabet
+
+## Regular Expression Patterns
+The first parameter of the `Pattern.compile()` method is the pattern. It describes what is being searched for.
+
+Brackets are used to find a range of characters:
+
+1. [abc] - Find one character from the options between the brackets
+2. [^abc] - Find one character NOT between the brackets
+3. [0-9] - Find one character from the range 0 to 9.
+
+## Metacharcters
+Metacharacters are characters with a special meaning:
+
+Metacharacter | Description
+--------------|-------------
+\|            | Find a match for any one of the patterns separated by \| as in: cat|dog|fish
+.             | Find just one instance of any character
+^             | Finds a match as the beginning of a string as in: ^Hello
+$             | Finds a match at the end of the string as in: World$
+\d            | Find a digit
+\s            | Find a whitespace character
+\b            | Find a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b
+\uxxxx        | Find the Unicode character specified by the hexadecimal number xxxx
 
 
+## Quantifiers
+Quantifiers define quantities:  
+Quantifier | Description
+-----------|-------------
+n+         | Matches any string that contains at least one n
+n*         | Matches any string that contains zero or more occurrences of n
+n?         | Matches any string that contains zero or one occurrences of n
+n{x}       | Matches any string that contains a sequence of X n's
+n{x,y}     | Matches any string that contains a sequence of X to Y n's
+n{x,}      | Matches any string that contains a sequence of at least X n's
