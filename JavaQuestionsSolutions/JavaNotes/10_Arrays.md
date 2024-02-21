@@ -1,10 +1,41 @@
 # Java Arrays
 * To declare an array, define the variable type with square brackets:
-* To insert values to it, you can place the values in a comma-separated list, inside curly braces:
-e.g. 
+* To insert values to it, you can place the values in a comma-separated list, inside curly braces:  
+### Creating an Array - Method 1
+* e.g. `String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};`
+* e.g. `int[] numbers = new int[3];` // Array of integers with size 3
+* e.g. `char[] characters = new char[4]` // An Array of characters with size 4 
+* e.g. `String[] strings = new Strings[5]` // An Array of String with size 5
 
-`String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
-`
+### Creating an Array - Method 2
+```
+class Food{
+  String name;
+  Food(String name){
+    this.name = name;
+  }
+}
+
+public class Main{
+  public static void main(String[] args){
+    // Creating an array with name refrigerator that can hold food objects for us
+    Food[] refrigerator = new Food[3]; 
+    // let's create 3 food objects
+    Food food1 = new Food("Roti");
+    Food food2 = new Food("Rice");
+    Food food3 = new Food("Rajma");
+
+    // Storing
+    refrigerator[0] = food1;
+    refrigerator[1] = food2;
+    refrigerator[2] = food3;
+
+    System.out.println(refrigerator[0].name); // Roti
+    System.out.println(refrigerator[1].name); // Rice
+    System.out.println(refrigerator[2].name); // Rajma
+  }
+}
+```
 
 ## Loop through the array
 ```
