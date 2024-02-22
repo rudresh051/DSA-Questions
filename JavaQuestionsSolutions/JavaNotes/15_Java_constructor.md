@@ -1,9 +1,59 @@
 # Java Constructors
+```
+Think of a constructor in Java like the blueprint for making something new, 
+like assembling a piece of furniture. Let's say you're putting together a chair. 
+The constructor is like the instruction manual that guides you through the process 
+step by step. It helps you set up the chair properly, from attaching the legs to 
+putting on the seat, ensuring everything is in the right place. In Java, when you 
+want to create a new object, you use a constructor to initialize it correctly, 
+ensuring it's ready for use just like assembling a chair according to its blueprint.
+```
+**Definition**  
+A constructor is a special method that is called when an object is instantiated(Created)
+
 * A constructor in Java is a special method that is used to initialize objects.
 * The constructor is called when an object of a class is created.
-* It can be used to set initial values for object attributes:
+* It can be used to set initial values for object attributes:  
 
-e.g. 
+e.g. 1
+```
+class Human{
+    String name;
+    int age;
+    double weight;
+
+    Human(String name, int age, double weight){
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+    }
+}
+
+public class Main {
+    public static void main(String[] args){
+        Human human1 = new Human("Rick", 65, 70);
+        Human human2 = new Human("Morty", 16, 70);
+        System.out.println(human1.name);
+        System.out.println(human2.name);
+    }
+}
+```
+
+#### Why passing arguments to a constructor is useful?
+=> This gives us the ability to create different objects that have different attributes
+#### Why we are using this keyword in above example?
+=> In Java, "this" is a special keyword used inside a class to refer   
+to the current object. Think of it as a way for an object to refer   
+to itself. In your example, when you create a new human   
+(Human human1 = new Human("Rick", 65, 70);), you're telling Java to make a   
+new human with the name "Rick", age 65, and weight 70. When you use   
+this.name = name;, you're saying, "Set the name of this human to the name   
+I provided when I created it."
+
+
+
+
+e.g. 2
 ```
 // Create a Main class
 public class Main{
