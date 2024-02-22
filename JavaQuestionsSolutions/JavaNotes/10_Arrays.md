@@ -52,9 +52,70 @@ for (int i = 0; i < cars.length; i++) {
 }
 ```
 
-### Multidimensional array
+### Multidimensional array 
+* It is nothing but an array of arrays. Think of 2D Arrays as number of rows and columns.
 To create a two-dimensional array, add each array within its own set of curly braces:
 
+e.g.1
 ```
 int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+```
+
+e.g.2
+```
+public class Main{
+  public static void main(String[] args){
+    // declaration of size of 2d array or allocating memory 
+    String[][] cars = new String[3][3];
+    // let's assign some elements
+    cars[0][0] = "Camaro";
+    cars[0][1] = "Corvette";
+    cars[0][2] = "Silverado"; 
+    cars[1][0] = "Mustang";
+    cars[1][1] = "Ranger";
+    cars[1][2] = "F-150";
+    cars[2][0] = "Ferrari";
+    cars[2][1] = "Lambo";
+    cars[2][2] = "Tesla";
+
+    // Now let's display our 2d array using nested for loop
+    for(int i=0;i<cars.length;i++) {
+      System.out.println();
+      for(int j=0;j<cars[i].length;j++) {
+        System.out.print(cars[i][j] + " ");
+      }
+    }
+  }
+}
+
+/* output
+Camaro Corvette Silverado 
+Mustang Ranger F-150 
+Ferrari Lambo Tesla */ 
+```
+
+e.g.3 For above example we can assign values right away when we declared it.
+
+```
+public class Main{
+  public static void main(String[] args){
+    // declaration of size of 2d array
+    String[][] cars =   {
+                            {"Camero","Corvette","Silverado"},
+                            {"Mustang","Ranger","F-150"},
+                            {"Ferrari","Lambo", "Tesla"}
+                        };
+    // Now let's display our 2d array using nested for loop
+    for(int i=0;i<cars.length;i++) {
+      System.out.println();
+      for(int j=0;j<cars[i].length;j++) {
+        System.out.print(cars[i][j] + " ");
+      }
+    }
+  }
+}
+/* output
+Camaro Corvette Silverado 
+Mustang Ranger F-150 
+Ferrari Lambo Tesla */ 
 ```
