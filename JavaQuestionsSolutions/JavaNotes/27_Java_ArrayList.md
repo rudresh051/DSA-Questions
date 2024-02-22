@@ -13,40 +13,59 @@ Elements can be added and removed after compilation phase.
 It store reference data types.
 
 ## Syntax
-e.g.   
 `ArrayList<String> food = new ArrayList<String>(); `
-e.g.  
+
+e.g.1  
 Create an ArrayList object called cars that will store strings: 
+
+e.g.2
+```
+public class Main{
+  public static void main(String[] args){
+    ArrayList<String> food = new ArrayList<String>();
+    food.add("pizza");
+    food.add("hamburger");
+    food.add("hotdog");
+
+    for(int i=0;i<food.size();i++){
+      System.out.println(food.get(i));
+    }
+  }
+}
+```
 
 ```
 import java.utel.ArrayList; // import the ArrayList class
 ArrayList<String> cars = new ArrayList<String>(); // Create an ArrayList object
 ```
-# Add Items
+
+# Methods for ArrayList
+### Add Items
 use `add()` method
 cars.add("Volvo");
 
-# Access an Item
+### Access an Item
 use `get()` method and refer to the index number
 cars.get(0)
 
-# Change an Item
+### Change an Item
 To modify an element, use the `set()` method and refer to the index number:
 
-cars.set(0,"Opel");
+`cars.set(0,"Opel");`    
+`food.set(0,"sushi")`
 
-# Remove an Item
+### Remove an Item
 To remove an element, use the **remove()** and refer to the index number  
 `cars.remove(0);`
 
 To remove all the elements in the ArrayList, use the **clear()** method.
 
-# ArrayList Size
+### ArrayList Size
 To find out how many elements an ArrayList have, use the `size` method:
 
 `cars.size()`
 
-# Loop Through an ArrayList
+### Loop Through an ArrayList
 1. use for `loop` and use `size()` method
 2. You can also loop through an `ArrayList` with the **for-each** loop
 e.g.
@@ -83,7 +102,7 @@ public class Main {
 }
 ```
 
-## ArryList for other types
+### ArryList for other types
 1. To use other types, such as int, you must specify an equivalent wrapper class: `Integer`
     * Use Boolean for boolean
     * Use Character for char
@@ -103,7 +122,7 @@ public class Main(String[] args){
 }
 ```
 
-## Sort an ArrayList
+### Sort an ArrayList
 Another useful class in the java.util package is the Collections class, which   include the sort() method for sorting lists alphabetically or numerically:  
 ```
 import java.util.ArrayList;
