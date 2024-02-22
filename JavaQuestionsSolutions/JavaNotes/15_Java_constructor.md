@@ -27,6 +27,12 @@ class Human{
         this.age = age;
         this.weight = weight;
     }
+    void eat(){
+        System.out.println(this.name+" is eating");
+    }
+    void drink(){
+        System.out.println(this.name+" is drinking *burp*");
+    }
 }
 
 public class Main {
@@ -35,13 +41,22 @@ public class Main {
         Human human2 = new Human("Morty", 16, 70);
         System.out.println(human1.name);
         System.out.println(human2.name);
+
+        human2.eat();
+        human1.drink();
     }
 }
+
+/* Rick
+Morty
+Morty is eating
+Rick is drinking *burp* */
+
 ```
 
-#### Why passing arguments to a constructor is useful?
+#### Q.Why passing arguments to a constructor is useful?
 => This gives us the ability to create different objects that have different attributes
-#### Why we are using this keyword in above example?
+#### Q.Why we are using this keyword in above example?
 => In Java, "this" is a special keyword used inside a class to refer   
 to the current object. Think of it as a way for an object to refer   
 to itself. In your example, when you create a new human   
@@ -50,8 +65,15 @@ new human with the name "Rick", age 65, and weight 70. When you use
 this.name = name;, you're saying, "Set the name of this human to the name   
 I provided when I created it."
 
+#### Q. What is the point of using constructor?
+=> They allow us to construct objects that have varying attributes. so with the help of   
+constructors we can construct objects that have different qualities
 
+#### Q. How can you access an object attributes from within it's class itself?
+=> So you can utilize the this keyword to help us with that
 
+#### Q. How constructors are useful?
+=> They allow us to assign different attributes to each object that we instantiate.
 
 e.g. 2
 ```
