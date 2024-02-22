@@ -8,6 +8,13 @@ or remove elements to/from an array, you have to create a new one).
 While elements can be added and removed from an ArrayList whenever you want.   
 The syntax is also slightly different:
 
+In other words ArrayList is a resizable array.  
+Elements can be added and removed after compilation phase.  
+It store reference data types.
+
+## Syntax
+e.g.   
+`ArrayList<String> food = new ArrayList<String>(); `
 e.g.  
 Create an ArrayList object called cars that will store strings: 
 
