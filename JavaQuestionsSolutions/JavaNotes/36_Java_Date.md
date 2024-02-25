@@ -26,3 +26,30 @@ public class Main{
 // Output
 2024-02-25
 ```
+## Display Current Time
+To display the current time (hour, minute, second, and nanoseconds), import the   
+`java.time.LocalTime` class, and use its `now()` method  
+e.g.2  
+```
+import java.time.LocalTime; // import the LocalTime class
+public class Main{
+    public static void main(String[] args){
+        LocalTime myObj = LocalTime.now();
+        System.out.println(myObj);
+    }
+}
+```
+
+## Display Current Date and Time
+To display the current date and time, import the `java.time.LocalDateTime` class, and use its `now()` method
+
+e.g. 
+```
+import java.time.LocalDateTime; // import the LocalDateTime class
+public class Main{
+    public static void main(String[] args){
+        LocalDateTime myObj = LocalDateTime.now();
+        System.out.printlin(myObj);
+    }
+}
+```
