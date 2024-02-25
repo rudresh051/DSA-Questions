@@ -37,3 +37,58 @@ public class Main{
     }
 }
 ```
+
+## Access an Item
+To access a value in the `HashMap`, use the `get()` method and refer to its key:
+
+```
+import java.util.HashMap;
+public class Main{
+    public static void main(String[] args){
+        HashMap<String, String> capitalCities = new HashMap<String, String>();
+    }
+    capitalCities.put("England","London");
+    capitalCities.put("Germany", "Berlin");
+    capitalCities.put("Norway","Oslo");
+    capitalCities.put("USA","Washington DC");
+    System.out.printlin(capitalCities.get("England"));
+}
+// Output
+London
+```
+
+## Remove an Item
+To remove an item, use the `remove()` method and refer to the key
+
+```
+import java.util.HashMap;
+public class Main{
+    public static void main(String[] args){
+        HashMap<String, String> capitalCities = new HashMap<String, String>();
+        capitalCities.put("England","London");
+        capitalCities.put("Germany","Berlin");
+        capitalCities.put("Norway","Oslo");
+        capitalCities.put("USA","Washington DC");
+        System.out.println(capitalCities.get("England"));
+    }
+}
+```
+To remove all items, use the `clear()` method
+`capitalCities.clear();`
+
+## HashMap Size
+To find out how many items there are, use the size() method:
+
+```
+import java.util.HashMap;
+public class Main{
+    public static void main(String[] args){
+        HashMap<String, String> capitalCities = new HashMap<String, String>();
+        capitalCities.put("England","London");
+        capitalCities.put("Germany","Berlin");
+        capitalCities.put("Norway","Oslo");
+        capitalCities.put("USA","Washington DC");
+        System.out.println(capitalCities.size());
+    }
+}
+```
