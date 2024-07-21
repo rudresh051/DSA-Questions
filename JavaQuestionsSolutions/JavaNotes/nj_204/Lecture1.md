@@ -1,13 +1,11 @@
+# Intro
 Java
-
 Oracle corporation
-
 10 million developers world wide
-
 3 billion users
 
 Features - 
-1. simple
+1. Simple
 2. Object oriented
 3. WORA - Write once run everywhere
 4. Security - JVM
