@@ -54,8 +54,51 @@ The procedure of converting one data type into its equivallent another data type
 Note:- we can not typecast any datatype to any other data type, we can typecast only equivallent /compatible types.
 
 --we have 2 types of typecasting:-
-l.implicit typecasting :- (upcasting/ widening)
---smaller datatype value into the bigger data type ex:- from int to long
+* Implicit typecasting :- (upcasting/ widening)
+    * smaller datatype value into the bigger data type ex:- from int to long
 
 int x=10;
 long y=x;
+
+2. Explicit typecasting (downcasting/narrowing)
+    * Bigger datatype value into its equivalent smaller data type
+    * e.g. into to byte
+    * int x = 10;
+      byte b = (byte)x; 
+
+```
+class Demo{
+    public static void main(String[] args){
+        int x = 5000;
+        byte b = (byte)x;
+        System.out.println(b);
+    }
+}
+```
+
+## User - defined data types
+* here we can take class, interface, enum, etc as userdefined data types.
+* Employee emp;
+* int x;
+
+## Wrapper classes
+Since java is an Object-Oriented programming language, There are some   situations, where we need to represent the primitive data types in the form of objects.  
+--in **java.lang** package some classes are defined to represent the primitive datatypes in the form of object.
+these classes are known as wrapper classes
+ex:-
+byte : java.lang.Byte
+short: java.lang.Short
+int : java.lang.Integer
+long : java.lang.Long
+float:  java.lang.Float
+char : java.lang.Character
+boolean : java.lang.Boolean
+
+String s = "100";
+
+To identify the range of a perticular data type these wrapper classes  
+has provided following constant variables in all the wrapper classes   except Boolean class.
+MIN_VALUE  
+MAX_VALUE  
+
+`System.out.println(Byte.MIN VALUE+-"+Byte.MAX_VALUE);`
