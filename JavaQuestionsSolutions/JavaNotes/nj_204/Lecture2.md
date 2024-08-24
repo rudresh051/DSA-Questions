@@ -11,8 +11,7 @@ class House{
 2. javac <Filename.java> e.g. javac Blueprint.java
 3. java <classname> e.g java House
 
-![javaProgram](Assets/image-1.png =200px x 150px)  
-[![Java Program](Assets/image-1.png =200px x 150px)]()
+![javaProgram](Assets/image-1.png)  
 
 
 Class file created by compiler

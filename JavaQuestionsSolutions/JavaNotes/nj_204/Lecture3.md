@@ -107,6 +107,31 @@ class Demo
 }
 ```
 
+Example 4
+```
+class Demo 
+{
+	public static void main(String[] args) 
+	{
+		byte b = 10;
+		//byte c = b+1;
+		// Result of above expression will be
+		// an integer, so we need to typecast it
+		byte c = (byte)(b+1);
+		System.out.println(c);
+		//formula
+		//max(int, typeA,typeB,typeC)
+		// Any non decimal number is integer
+		// max(int,byte,int)
+	}
+}
+
+
+```
+doing b++ will not any error  
+internal typecasting will happen
+
+
 ## User - Defined data types
 * Here we can take class, interface, enum, etc as userdefined data types.
 * Employee emp;
