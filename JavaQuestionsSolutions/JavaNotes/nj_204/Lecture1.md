@@ -23,7 +23,7 @@ Java comes in the form of 3 category
     * Implmentation of this J2SE specification is JDK s/w.
     * JDK 17 - Latest version
 
-![alt text](image.png)
+![alt text](Assets/image.png)
 
 ## Java application development
 Ways to run the Java code

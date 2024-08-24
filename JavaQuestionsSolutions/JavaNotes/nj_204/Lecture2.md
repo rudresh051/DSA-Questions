@@ -11,15 +11,15 @@ class House{
 2. javac <Filename.java> e.g. javac Blueprint.java
 3. java <classname> e.g java House
 
-![javaProgram](image-1.png)
+![javaProgram](Assets/image-1.png =200x150)
 
 
 Class file created by compiler
-![Classfile](image-2.png)
+![Classfile](Assets/image-2.png)
 
 
 * If we add public keyword before class, then we have to also name the file same as class name
-![publicKeyword](image-3.png)
+![publicKeyword](Assets/image-3.png)
 
 public is a access modifier
 
