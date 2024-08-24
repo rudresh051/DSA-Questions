@@ -15,10 +15,10 @@ Example (methods): concat(), forName(), getInputStream(), calculatelnterest()
 (constant variables are the variables, whose values are fixed throughout the program)  
 Example: MIN_PRIORITY, MAX_PRIORITY, NORM_PRIORITY
 
-* Java programming language belongs to c family programming language, i.e. most of basic   
+* Java programming language belongs to C family programming language, i.e. most of basic   
 programming constructs of Java are similar to the c language with some minor changes
 
-like :- operators, if-else, loops switch case, etc.
+Like :- operators, if-else, loops switch case, etc.
 
 ## Data Types
 Before representing the data , first we have to confirm type of the data, by using data types  
@@ -68,6 +68,22 @@ long y=x;
     * int x = 10;
       byte b = (byte)x; 
 
+![alt text](Assets/image-4.png)
+
+Example 1
+```
+class Demo 
+{
+	public static void main(String[] args) 
+	{
+		int x = 127;
+		// Explicit Type Casting
+		byte b = (byte)x;
+		System.out.println(b);
+	}
+}
+```
+Example 2
 ```
 class Demo{
     public static void main(String[] args){
@@ -77,8 +93,21 @@ class Demo{
     }
 }
 ```
+Example 3
+```
+class Demo 
+{
+	public static void main(String[] args) 
+	{
+		//float f = (float)10.55;
+		float f = 10.55f;
 
-## User - defined data types
+		System.out.println(f);
+	}
+}
+```
+
+## User - Defined data types
 * Here we can take class, interface, enum, etc as userdefined data types.
 * Employee emp;
 * int x;
@@ -90,7 +119,7 @@ where we need to represent the primitive data types in the form of objects.
 datatypes in the form of object. 
 these classes are known as wrapper classes  
 
-ex:-  
+Ex:-  
 byte : java.lang.Byte  
 short: java.lang.Short  
 int : java.lang.Integer  
