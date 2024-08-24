@@ -1,12 +1,13 @@
 # Java Language Fundamentals
 
 Java Naming Convention, coding standard.
-* java is a case sensetive programming language, we use diff conventions for naming our classes, methods and variables.  
-* All class names, abstract class names, interface names and Enum, names should follow **"PascalNamingConvention"**,  
-which means, the first letter of every word should be in upper case
+* Java is a case sensetive programming language, we use diff conventions for naming our   
+classes, methods and variables.  
+* All class names, abstract class names, interface names and Enum, names should follow   
+**"PascalNamingConvention"**, which means, the first letter of every word should be in upper case
     * Example: String, ArrayList, InputStreamReaderIStringBuffer,Student, Employee,etc
-* All Java variables, method names should follow **camelNamingConvention**, which means the first letter should be in  
-lowercase and the subsequent word should start with Uppercase
+* All Java variables, method names should follow **camelNamingConvention**, which means the first   
+letter should be in lowercase and the subsequent word should start with Uppercase
 
 Example (variables): in, studentName, pageContext  
 Example (methods): concat(), forName(), getInputStream(), calculatelnterest()  
@@ -14,21 +15,20 @@ Example (methods): concat(), forName(), getInputStream(), calculatelnterest()
 (constant variables are the variables, whose values are fixed throughout the program)  
 Example: MIN_PRIORITY, MAX_PRIORITY, NORM_PRIORITY
 
-* Java programming language belongs to c family programming language, i.e. most of basic programming constructs of  
-Java are similar to the c language with some minor changes
-
+* Java programming language belongs to c family programming language, i.e. most of basic   
+programming constructs of Java are similar to the c language with some minor changes
 
 like :- operators, if-else, loops switch case, etc.
 
 ## Data Types
-before representing the data , first we have to confirm type of the data, by using data types
+Before representing the data , first we have to confirm type of the data, by using data types  
 in java there are 2 types of data types:-
 l.primitive data types
 2.user-defined data types
 
 primitive data types:-
-java supports total 8 primitive data types under 4 category:-
-1. Integers:-
+java supports total 8 primitive data types under 4 category:-  
+1. Integers:-  
     * byte :- 8bit / 1 byte // 0 :- 127 to -128
     * Short - 16bit/2 byte // 0
     * int - 32 bit/4 byte// 0
@@ -49,9 +49,11 @@ java supports total 8 primitive data types under 4 category:-
 * Any non-decimal point digit is treated as int by default in java
 
 ## Type Casting
-The procedure of converting one data type into its equivallent another data type is known as typecasting.
+The procedure of converting one data type into its equivallent another data type is   
+known as typecasting.
 
-Note:- we can not typecast any datatype to any other data type, we can typecast only equivallent /compatible types.
+Note:- we can not typecast any datatype to any other data type, we can typecast only   
+equivallent /compatible types.
 
 --we have 2 types of typecasting:-
 * Implicit typecasting :- (upcasting/ widening)
@@ -77,27 +79,31 @@ class Demo{
 ```
 
 ## User - defined data types
-* here we can take class, interface, enum, etc as userdefined data types.
+* Here we can take class, interface, enum, etc as userdefined data types.
 * Employee emp;
 * int x;
 
 ## Wrapper classes
-Since java is an Object-Oriented programming language, There are some   situations, where we need to represent the primitive data types in the form of objects.  
---in **java.lang** package some classes are defined to represent the primitive datatypes in the form of object.
-these classes are known as wrapper classes
-ex:-
-byte : java.lang.Byte
-short: java.lang.Short
-int : java.lang.Integer
-long : java.lang.Long
-float:  java.lang.Float
-char : java.lang.Character
-boolean : java.lang.Boolean
+Since java is an Object-Oriented programming language, There are some situations,   
+where we need to represent the primitive data types in the form of objects.  
+--in **java.lang** package some classes are defined to represent the primitive   
+datatypes in the form of object. 
+these classes are known as wrapper classes  
+
+ex:-  
+byte : java.lang.Byte  
+short: java.lang.Short  
+int : java.lang.Integer  
+long : java.lang.Long  
+float:  java.lang.Float  
+char : java.lang.Character  
+boolean : java.lang.Boolean  
 
 String s = "100";
 
 To identify the range of a perticular data type these wrapper classes  
-has provided following constant variables in all the wrapper classes   except Boolean class.
+has provided following constant variables in all the wrapper classes   
+except Boolean class.
 MIN_VALUE  
 MAX_VALUE  
 
