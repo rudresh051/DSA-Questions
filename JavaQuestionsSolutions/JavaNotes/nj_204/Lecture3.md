@@ -1,12 +1,12 @@
 # Java Language Fundamentals
 
 Java Naming Convention, coding standard.
-* Java is a case sensetive programming language, we use diff conventions for naming our   
+* Java is a **case sensetive programming language**, we use diff conventions for naming our   
 classes, methods and variables.  
-* All class names, abstract class names, interface names and Enum, names should follow   
+* **All class names, abstract class names, interface names and Enum,** names should follow   
 **"PascalNamingConvention"**, which means, the first letter of every word should be in upper case
     * Example: String, ArrayList, InputStreamReaderIStringBuffer,Student, Employee,etc
-* All Java variables, method names should follow **camelNamingConvention**, which means the first   
+* **All Java variables, method names** should follow **camelNamingConvention**, which means the first   
 letter should be in lowercase and the subsequent word should start with Uppercase
 
 Example (variables): in, studentName, pageContext  

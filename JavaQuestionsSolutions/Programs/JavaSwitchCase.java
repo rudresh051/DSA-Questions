@@ -19,8 +19,6 @@ public class JavaSwitchCase {
             default:
                 System.out.println("May be Other Indian City");
                 break;
-
         }
-
     }
 }
