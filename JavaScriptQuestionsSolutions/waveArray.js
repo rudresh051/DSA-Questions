@@ -71,5 +71,10 @@ class Solution {
         // 5. Now initialize an empty array arr3
         // 6. Loop over the arr1 or arr2
         // 7. Push to arr3 for each value of i when i is even and when i is odd
+
+        
+
+
+
     }
 }
