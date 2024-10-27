@@ -49,3 +49,23 @@ age : variable [identifier]
 25 : value/constant [literal]
 ; : terminator
 ```
+Note - To Provide identifiers in java programming, we have to use the following rules and regulations - 
+
+Identifiers should not be started with any number, identifiers may be started with an alphabet, '_'
+symbol, '$' symbol, but, the subsequent symbols may be a number, an alphabet, '_' symbol, '$' symbol.
+
+```java
+// camelCase(recommendation, convention) = thisIsMe => variable names, Method names
+
+// PascalCase = ThisIsMe => classes, interfaces, abstract classes
+
+Identifiers are not allowing spaces in the middle.
+
+ex : 
+int employeeNumber = 111; //valid
+String #address = "Pune"; // Invalid
+String employee-Address = "Hyderabad"; //Invalid
+getInputStream();//valid
+get Input Stream(); // Invalid
+
+```
