@@ -49,7 +49,8 @@ age : variable [identifier]
 25 : value/constant [literal]
 ; : terminator
 ```
-Note - To Provide identifiers in java programming, we have to use the following rules and regulations - 
+
+Note - To Provide identifiers in java programming, we have to use the following rules and regulations -
 
 Identifiers should not be started with any number, identifiers may be started with an alphabet, '_'
 symbol, '$' symbol, but, the subsequent symbols may be a number, an alphabet, '_' symbol, '$' symbol.
@@ -68,4 +69,32 @@ String employee-Address = "Hyderabad"; //Invalid
 getInputStream();//valid
 get Input Stream(); // Invalid
 
+In java applications, it is suggestible to provide identifiers with a particular meaning.
 ```
+
+## Literals
+
+Literal is a constant/value assigned to the variable.
+
+To prepare java programs, JAVA has provided the following set of literal :
+
+1. Integer/Integral Literals -
+byte, short, int, long - 10, 20, 30, ....
+char - 'A', 'B', ...
+
+2. Floating Point Literals -
+float - 10.22f, 23.345f, ...
+double - 11.123, 456.345, ...
+
+3. Boolean Literals -
+boolean - true, false
+
+4. String Literals -
+String - "Welcome", "Hello", ....
+
+## Keywords/Reserved Words
+
+Keywords in Java convey a special meaning to the compiler therefore, these cannot be used as
+identifiers.
+Among the list of keywords list mentioned below the keywords goto and const are currently not in use.
+They are reserved words (for future use)..
