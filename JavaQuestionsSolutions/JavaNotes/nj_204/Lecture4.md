@@ -98,3 +98,52 @@ Keywords in Java convey a special meaning to the compiler therefore, these canno
 identifiers.
 Among the list of keywords list mentioned below the keywords goto and const are currently not in use.
 They are reserved words (for future use)..
+
+![alt text](image-1.png)
+
+## Operators
+
+An operator is a symbol, it will perform a particular operation over the provided operands.
+To prepare java applications, JAVA has provided the following list of operators.
+
+1. Arithmetic Operators
++, - , * ,/ , %, ++, --
+
+2. Assignment Operators
+=, +=, -=, *=, /=, %=
+
+3. Comparison Operators
+==, !=, < , >, <=, >=
+
+4. Boolean Logical Operators
+5. Bitwise Logical Operators
+6. Short-Circuit Operators
+7. Ternary Operator
+
+Example1 - 
+```java
+package com.masai;
+public class Main{
+    public static void main(String[] args){
+        int a=10;
+        System.out.println(a); //10
+        System.out.println(a++);//10 //post-increment => (print, increase)
+        System.out.println(++a);//12
+        System.out.println(a--);//12
+        System.out.println(--a);//10
+        System.out.println(a);//10
+    }
+}
+```
+
+Outpus - 
+10
+10
+12
+12
+10
+10
+
+
+
+
