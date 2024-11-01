@@ -120,7 +120,8 @@ To prepare java applications, JAVA has provided the following list of operators.
 6. Short-Circuit Operators
 7. Ternary Operator
 
-Example1 - 
+Example1 -
+
 ```java
 package com.masai;
 public class Main{
@@ -136,7 +137,7 @@ public class Main{
 }
 ```
 
-Outpus - 
+Outpus -
 10
 10
 12
@@ -144,6 +145,28 @@ Outpus -
 10
 10
 
+### Example 2
 
+```java
+package com.masai;
+public class Main{
+public static void main(String[] args){
+int a=5;
+System.out.println(++a - ++a);
+}
+}
 
+// output = -1
+```
 
+### Example 3
+
+```java
+package com.masai;
+public class Main{
+public static void main(String[] args){
+int a=5;
+System.out.println((--a+--a)*(++a-a--)+(--a+a--)*(++a+a++));
+}
+}
+```
