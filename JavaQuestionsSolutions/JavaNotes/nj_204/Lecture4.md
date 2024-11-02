@@ -170,3 +170,35 @@ System.out.println((--a+--a)*(++a-a--)+(--a+a--)*(++a+a++));
 }
 }
 ```
+output - 16
+explanation - (4+3)*(4-4)+(2+2)*(2+2)
+
+Example - Boolean Logical Operator
+
+This operator can also be applied the boolean value as well as an integer.
+
+![alt text](image-2.png)
+
+
+Example 1 - 
+
+```java
+package com.masai;
+public class Main{
+public static void main(String[] args{
+boolean b1=true;
+boolean b2=false;
+System.out.println(b1&b1);//true
+System.out.println(b1&b2);//false
+System.out.println(b2&b1);//false
+System.out.println(b2&b2);//false
+System.out.println(b1|b1);//true
+System.out.println(b1|b2);//true
+System.out.println(b2|b1);//true
+System.out.println(b2|b2);//false
+System.out.println(b1^b1);//false
+System.out.println(b1^b2);//true
+System.out.println(b2^b1);//true
+System.out.println(b2^b2);//false
+}
+```
