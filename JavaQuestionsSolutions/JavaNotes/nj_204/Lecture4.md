@@ -180,7 +180,7 @@ This operator can also be applied the boolean value as well as an integer.
 ![alt text](image-2.png)
 
 
-Example 1 - 
+### Example 4 - 
 
 ```java
 package com.masai;
@@ -201,4 +201,38 @@ System.out.println(b1^b2);//true
 System.out.println(b2^b1);//true
 System.out.println(b2^b2);//false
 }
+```
+
+### Example 5 - 
+
+```java
+package com.masai;
+public class Main{
+    public static void main(String[] args){
+    int a=10;
+    int b=2;
+    System.out.println(a&b);
+    System.out.println(a|b);
+    System.out.println(a^b);
+    System.out.println(a<<b);
+    System.out.println(a>>b);
+    }
+}
+```
+
+### Example 6
+
+```java
+int a=10;// 1010
+int b=2;// 0010
+a&b--->10&2--> 0010-----> 2
+a|b--->10|2--> 1010-----> 10
+a^b--->10^2--> 1000-----> 8
+a<<b ---> 10<<2 -----> 00001010
+00101000---> 40
+--> Remove 2 symbols at left side and append 2 0's at right side.
+a>>b ---> 10>>2 -----> 00001010
+00000010
+--> Remove 2 symbols at right side and append 2 0's at left side.
+Note: Removable Symbols may be o's and 1's but appendable symbols must be 0's.
 ```
