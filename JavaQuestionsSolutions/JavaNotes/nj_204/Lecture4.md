@@ -236,3 +236,61 @@ a>>b ---> 10>>2 -----> 00001010
 --> Remove 2 symbols at right side and append 2 0's at left side.
 Note: Removable Symbols may be o's and 1's but appendable symbols must be 0's.
 ```
+
+Example - Short-Circuit Operators
+The main intention of Short-Circuit operators is to improve java applications performance.
+&&  
+||  
+| vs ||
+
+In the case of Logical-OR operator, if the first operand value is true then it is not required
+to check second operand value, directly, we can predict the result of overall expression is
+true.
+In the case of '|' operator, even first operand value is true , still, JVM evaluates second
+operand value then only JVM will get the result of overall expression is true, here
+evaluating second operand value is unnecessary, it will increase execution time and it will
+reduce application performance.
+In the case of '||' operator, if the first operand value is true then JVM will get the overall
+expression result is true with out evaluating second operand value, here JVM is not
+evaluating second operand expression unnecessarily, it will reduce execution time and it
+will improve application performance.
+Note: If the first operand value is false then it is mandatory for JVM to evaluate second
+operand value in order to get overall expression result.
+
+Example - 
+
+```java
+package com.masai;
+public class Main{
+    public static void main(String[] args {
+        int a=10;
+        int b=10;
+        if( (a++ == 10) | (b++ == 10) )
+        {
+            System.out.println(a+" "+b);//OUTPUT: 11 11
+        }
+        int c=10;
+        int d=10;
+        if( (c++ == 10) || (d++ == 10) )
+        {
+        System.out.println(c+" "+d);//OUTPUT: 11 10
+        }
+    }
+}
+```
+
+& vs && 
+
+In the case of Logical-AND operator, if the first operand value is false then it is not
+required to check second operand value, directly, we can predict the result of overall
+expression is false.
+In the case of '&' operator, even first operand value is false , still, JVM evaluates second
+operand value then only JVM will get the result of overall expression is false, here
+evaluating second operand value is unnecessary, it will increase execution time and it will
+reduce application performance.
+In the case of '&&' operator, if the first operand value is false then JVM will get the overall
+expression result is false with out evaluating second operand value, here JVM is no evaluating second
+operand expression unnecessarily, it will reduce execution time and it
+will improve application performance.
+Note: If the first operand value is true then it is mandatory for JVM to evaluate second
+operand value in order to get overall expression result.
