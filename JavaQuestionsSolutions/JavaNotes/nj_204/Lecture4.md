@@ -294,3 +294,29 @@ operand expression unnecessarily, it will reduce execution time and it
 will improve application performance.
 Note: If the first operand value is true then it is mandatory for JVM to evaluate second
 operand value in order to get overall expression result.
+
+Data Types:
+Java is strictly a typed programming language, where in java applications before
+representing data first we have to confirm which type of data we representing. In this
+context, to represent type of data we have to use "data types".
+In java applications , data types are able to provide the following advantages.
+1. We are able to identify memory sizes to store data.
+example :
+ int i=10;--> int will provide 4 bytes of memory to store 10 value.
+2. We are able to identify range values to the variable to assign.
+example:
+byte b=130;---> Invalid
+byte b=125;---> Valid
+
+Reason: 'byte' data type is providing a particular range for its variables like -128 to 127, in
+this range only we have to assign values to byte variables.
+
+To prepare java applications, JAVA has provided the following data types.
+
+A. Primitive Data types :
+1. Numeric Data Types
+a. Integral data types/ Integer Data types:
+byte ------> 1 bytes ----> 0
+short------> 2 bytes-----> 0
+int--------> 4 bytes-----> 0
+long-------> 8 bytes-----> 0
