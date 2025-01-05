@@ -1,3 +1,4 @@
+// https://www.geeksforgeeks.org/problems/minimize-sum-of-alternate-product2033/1?page=1&sortBy=difficulty
 //{ Driver Code Starts
 // Driver code
 const readline = require('readline');
