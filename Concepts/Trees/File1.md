@@ -103,3 +103,5 @@ Here’s a visual representation of a **Tree Data Structure** illustrating all t
     - Degree of leaf nodes (E, F, G, H) = 0
     - Maximum degree = **2** (Binary Tree)
 12. **Edges**: The tree has **7 edges** (A→B, A→C, B→D, B→E, C→F, D→G, D→H).
+
+## How to Create Binary Tree Data structure
