@@ -105,3 +105,139 @@ Here’s a visual representation of a **Tree Data Structure** illustrating all t
 12. **Edges**: The tree has **7 edges** (A→B, A→C, B→D, B→E, C→F, D→G, D→H).
 
 ## How to Create Binary Tree Data structure
+
+### **Understanding the Memory Perspective**
+A **binary tree** is a hierarchical data structure where each **node** has:
+1. **Data** (or value)
+2. A pointer to the **left child**
+3. A pointer to the **right child**
+
+Each **node** in memory holds:
+- A value (which takes up memory depending on its type, e.g., `number` or `string`).
+- Two references (pointers) to child nodes (left and right), which are memory addresses.
+
+---
+
+### **Memory Representation**
+If you imagine memory as a linked structure:
+```
+         [10]   <-- Root Node (stored at memory location, say 0x100)
+        /    \
+    [5]      [15]  <-- Each node has left & right pointers
+   /   \     /   \
+ [2]   [7] [12]  [20]
+```
+Each node has:
+- A memory slot for the **value** (`number`).
+- Two memory slots for the **left and right pointers** (memory addresses).
+
+---
+
+### **Binary Tree Implementation in JavaScript**
+```javascript
+// Step 1: Define the Node structure
+class TreeNode {
+    constructor(value) {
+        this.value = value;   // Stores the value
+        this.left = null;     // Pointer to left child
+        this.right = null;    // Pointer to right child
+    }
+}
+
+// Step 2: Define the Binary Tree class
+class BinaryTree {
+    constructor() {
+        this.root = null;  // Initially, the tree is empty
+    }
+
+    // Step 3: Insert a new node
+    insert(value) {
+        const newNode = new TreeNode(value);
+
+        if (this.root === null) {
+            this.root = newNode; // If empty, set root
+            return;
+        }
+
+        let current = this.root;
+        while (true) {
+            if (value < current.value) {
+                // Go left
+                if (current.left === null) {
+                    current.left = newNode;
+                    return;
+                }
+                current = current.left;
+            } else {
+                // Go right
+                if (current.right === null) {
+                    current.right = newNode;
+                    return;
+                }
+                current = current.right;
+            }
+        }
+    }
+
+    // Step 4: Search for a value
+    search(value) {
+        let current = this.root;
+        while (current !== null) {
+            if (value === current.value) return true;
+            current = value < current.value ? current.left : current.right;
+        }
+        return false;
+    }
+
+    // Step 5: In-order Traversal (Left, Root, Right)
+    inOrderTraversal(node = this.root) {
+        if (node !== null) {
+            this.inOrderTraversal(node.left);
+            console.log(node.value);
+            this.inOrderTraversal(node.right);
+        }
+    }
+}
+
+// Usage Example
+const tree = new BinaryTree();
+tree.insert(10);
+tree.insert(5);
+tree.insert(15);
+tree.insert(2);
+tree.insert(7);
+tree.insert(12);
+tree.insert(20);
+
+console.log("Searching for 7:", tree.search(7)); // true
+console.log("Searching for 50:", tree.search(50)); // false
+
+console.log("In-order Traversal:");
+tree.inOrderTraversal(); // Output: 2 5 7 10 12 15 20
+```
+
+---
+
+### **How This Works in Memory**
+1. **When `new TreeNode(value)` is created**, it allocates memory for:
+   - The value (primitive type)
+   - Two memory references for left and right children
+
+2. **When `insert()` is called**, the tree follows **pointer references** to decide where to store the new node.
+
+3. **When `search()` is called**, it **traverses memory references** until it finds the value or reaches `null`.
+
+---
+
+### **Memory Complexity**
+- **Each node takes up O(1) space** (constant memory).
+- **Total space complexity = O(n)** (since each node requires memory for its value and two pointers).
+- **Search and Insert take O(log n) on average**, but **O(n) in worst case** (if the tree is skewed).
+
+---
+
+### **Key Takeaways**
+- Each **TreeNode** is an **object in memory** with a value and two pointers.
+- The **BinaryTree** class manages the root and inserts nodes dynamically.
+- Traversal methods navigate **memory pointers** from one node to another.
+
