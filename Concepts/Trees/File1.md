@@ -241,3 +241,6 @@ tree.inOrderTraversal(); // Output: 2 5 7 10 12 15 20
 - The **BinaryTree** class manages the root and inserts nodes dynamically.
 - Traversal methods navigate **memory pointers** from one node to another.
 
+![alt text](image-3.png)
+
+## How to code binary Tree Data Structure?
