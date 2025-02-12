@@ -244,3 +244,119 @@ tree.inOrderTraversal(); // Output: 2 5 7 10 12 15 20
 ![alt text](image-3.png)
 
 ## How to code binary Tree Data Structure?
+
+### **Iterative Binary Tree Code Explanation**
+
+1. **Node Class**:  
+   This part remains the same.  
+   Each node has a value (`data`), a `left` pointer, and a `right` pointer.
+
+   ```javascript
+   class Node {
+     constructor(data) {
+       this.data = data;
+       this.left = null;
+       this.right = null;
+     }
+   }
+   ```
+
+2. **Binary Tree Class (with Iterative Insertion and Traversal)**:
+
+   ```javascript
+   class BinaryTree {
+     constructor() {
+       this.root = null;
+     }
+
+     // Insert a new node iteratively
+     insert(data) {
+       const newNode = new Node(data);
+
+       // If the tree is empty, make the new node the root
+       if (this.root === null) {
+         this.root = newNode;
+         return;
+       }
+
+       // Start from the root and traverse down the tree
+       let currentNode = this.root;
+
+       while (true) {
+         if (data < currentNode.data) {
+           // Move left
+           if (currentNode.left === null) {
+             currentNode.left = newNode;
+             break; // Exit the loop after inserting
+           }
+           currentNode = currentNode.left; // Continue moving left
+         } else {
+           // Move right
+           if (currentNode.right === null) {
+             currentNode.right = newNode;
+             break; // Exit the loop after inserting
+           }
+           currentNode = currentNode.right; // Continue moving right
+         }
+       }
+     }
+
+     // In-Order Traversal (Iterative using a stack)
+     inOrderTraversal() {
+       if (this.root === null) return;
+
+       const stack = [];
+       let currentNode = this.root;
+
+       while (stack.length > 0 || currentNode !== null) {
+         // Reach the leftmost node
+         while (currentNode !== null) {
+           stack.push(currentNode);
+           currentNode = currentNode.left;
+         }
+
+         // Process the node on top of the stack
+         currentNode = stack.pop();
+         console.log(currentNode.data); // Visit the node
+
+         // Move to the right subtree
+         currentNode = currentNode.right;
+       }
+     }
+   }
+
+   // Test the Binary Tree
+   const myTree = new BinaryTree();
+   myTree.insert(15);
+   myTree.insert(10);
+   myTree.insert(20);
+   myTree.insert(8);
+   myTree.insert(12);
+   myTree.insert(17);
+   myTree.insert(25);
+
+   console.log("In-Order Traversal (Iterative):");
+   myTree.inOrderTraversal(); // Should print: 8, 10, 12, 15, 17, 20, 25
+   ```
+
+---
+
+### **Explanation**
+
+1. **Insertion (Iterative)**  
+   - Start at the root and compare the value with the current node.
+   - If the value is smaller, move to the left child.  
+   - If it’s larger, move to the right child.
+   - Continue moving until an empty spot is found, and insert the new node there.
+
+2. **In-Order Traversal (Iterative Using a Stack)**  
+   - Use a stack to simulate recursion:
+     - Push all left nodes onto the stack.
+     - Pop from the stack and visit the node.
+     - Move to the right subtree and repeat.
+   - This simulates the recursive "left → root → right" behavior without actually using recursion.
+
+---
+
+### **Why Iterative?**  
+1. **No Stack Overflow**: Recursive functions may cause a stack overflow if the tree is deep. Iterative methods avoid this.
