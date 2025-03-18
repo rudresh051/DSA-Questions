@@ -83,3 +83,6 @@ Q. What is the responsibility of "new" operator?
 1.reserve the memory space inside the heap area of RAM.  
 2. Load all the non-static members of that class into this area
 3. While loading the non-static variables, if that variable is not initialized, then default initialization will be provided by the new operator
+
+
+![alt text](image-5.png)
