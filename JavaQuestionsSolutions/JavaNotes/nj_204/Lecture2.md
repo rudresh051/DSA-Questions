@@ -11,8 +11,8 @@ class House{
 }
 ```
 
-2. javac <Filename.java> e.g. javac Blueprint.java
-3. java <classname> e.g java House
+2. javac <Filename.java> e.g. javac Blueprint.java => To create the class file
+3. java <classname> e.g java House => To run the java file
 
 ![javaProgram](Assets/image-1.png)  
 
