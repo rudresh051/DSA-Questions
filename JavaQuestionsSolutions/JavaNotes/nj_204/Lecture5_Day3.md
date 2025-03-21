@@ -86,3 +86,35 @@ Q. What is the responsibility of "new" operator?
 
 
 ![alt text](image-5.png)
+
+
+* nonstatic cannot be accessed from static method
+  
+  ![alt text](image-6.png)
+
+
+```
+public class BaseClass {
+    static int a = 10;
+    int b;
+
+    static public int add(int x, int y){
+        return x+y;
+    }
+
+    int multiply(int x, int y){
+        return x*y;
+    }
+
+
+    public static void main(String[] args) {
+        int c = add(10,20);
+        System.out.println(c);
+
+        BaseClass b1 = new BaseClass();
+
+        int d = b1.multiply(30,40);
+        System.out.println(d);
+    }
+}
+```
