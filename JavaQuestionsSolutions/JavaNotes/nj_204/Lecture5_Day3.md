@@ -118,3 +118,65 @@ public class BaseClass {
     }
 }
 ```
+
+
+* Static members will be common for all the objects
+* Non-static members can have different copy
+
+```java
+public class Bank {
+
+    // Bank Class is blueprint
+
+    static int totalBankBalance = 0;
+    int userAccountBalance=0;
+    long userAccountNumber=0;
+    String name;
+    long userMobileNumber=0;
+
+    public void createUserAccount(int a, long b, long c, String d){
+        userAccountBalance = a;
+        userAccountNumber = b;
+        userMobileNumber = c;
+        name = d;
+    }
+
+    public void displayUserAccountDetails(){
+//        System.out.print(userAccountBalance);
+//        System.out.print(userAccountNumber);
+//        System.out.print(userMobileNumber);
+//        System.out.print(name);
+
+        System.out.println(name + " " + userAccountBalance + " " + userAccountNumber + " " + userMobileNumber);
+    }
+
+    // All money in HDFC bank
+    void displayEntireHDFCBankBalance(){
+        System.out.println(totalBankBalance);
+    }
+
+    public static void main(String[] args){
+        Bank newCustomerRudreshwar = new Bank();
+        newCustomerRudreshwar.createUserAccount(35000,50100238567891L
+                ,1406537079L, "Rudreshwar Jha");
+
+        newCustomerRudreshwar.totalBankBalance = 1000;
+
+
+        Bank newCustomerRaja = new Bank();
+        newCustomerRaja.createUserAccount(40000, 50100234667891L, 1406657078L,"Raja Deoraj"
+        );
+        newCustomerRaja.totalBankBalance = 2000;
+
+        newCustomerRudreshwar.displayUserAccountDetails();
+        newCustomerRaja.displayUserAccountDetails();
+
+        newCustomerRudreshwar.displayEntireHDFCBankBalance();
+        newCustomerRaja.displayEntireHDFCBankBalance();
+
+
+        ;
+
+    }
+}
+```
