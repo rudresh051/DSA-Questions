@@ -180,3 +180,13 @@ public class Bank {
     }
 }
 ```
+
+
+## Summary
+* Static, non static member
+* RAM - Context and Heap memory
+* Debug in Intellij
+* "new" keyword
+* Garbage collector
+* Null Pointer exception
+  * Crashing
