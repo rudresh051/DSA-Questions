@@ -181,3 +181,134 @@ public class Demo {
 }
 ```
 
+* Handling null value
+
+```java
+//package day4;
+
+public class Demo {
+
+
+	
+	// method author
+	static void funX(A a1){
+		if(a1 !=null){
+		
+		System.out.println("inside funX of Demo" + a1);
+		a1.funA();
+		}
+		else{
+			System.out.println("Please don't pass null value");
+		}
+
+	}
+
+    public static void main(String[] args) {
+        System.out.println("inside main method of Demo class");
+
+
+		// 3 possibility - i.e. pass value to a reference variable of a class
+		//1. It's own class object
+		/* A obj = new A();
+		funX(obj);*/
+
+		// 2. to a class variable - any child object. if a particular class is a child of A class
+		/* A obj = new AChild();
+		funX(obj) */
+
+		// 3. is null
+		A obj = null;
+		funX(obj);
+		
+    }
+}
+```
+
+* Method with  a return type
+
+```java
+//package day4;
+
+public class Demo {	
+	// method author
+	static int funX(){
+		System.out.println("inside funX of Demo" );
+		int x = 100;
+		return x;
+	}
+
+    public static void main(String[] args) {
+        System.out.println("inside main method of Demo class");
+		int result = funX();
+		System.out.println(result);	
+    }
+}
+```
+
+* Method with a **class** return type
+
+```java
+//package day4;
+
+public class Demo {
+
+
+	
+	// method author
+	static A funX(){
+		System.out.println("inside funX of Demo" );
+		// returning own class object
+		A a1 = new A();
+		return a1;
+
+		//or
+
+		// use child class object
+		// or use null to return
+
+	}
+
+    public static void main(String[] args) {
+        System.out.println("inside main method of Demo class");
+		funX();
+    }
+}
+
+
+```
+
+## Polymorphism
+
+--defining more than one functionality with the same name in the same class is known as polymorphism.  
+
+we have 2 type of polymorphism:-  
+l.**static polymorphism** :- method overloading (same method name,but the parameter will be different)  
+--is also know as compile time polymorphism, i.e which method will be called , decided at compile time only.  
+
+2.**dynamic polymorphism** :- method overriding:- (same method name And same parameter,) method overriding we achive throught inheritance  
+
+--is also know as run time polymorphism, i.e which method will be called , decided at runtime.
+
+
+```java
+class Demo
+{
+    void fun1(byte b){
+        System.out.println("inside fun1(byte) of Demo");
+    }
+
+    void fun1(int i){
+        System.out.println("inside fun1(int) of Demo");
+    }
+
+
+    public static void main(String[] args){
+        Demo d1 = new Demo();
+        byte x = 20;
+        d1.fun1(x); // it will give the priority to the nearest one.
+
+        or
+        // d1.fun1(20); It will call the fun1 with int argument
+    }
+}
+
