@@ -312,3 +312,20 @@ class Demo
     }
 }
 
+## Summary
+* How to compile in CMD
+`javac A.java`
+
+* How to run
+`java A`
+
+* When an object is instantiated
+	* Memory is allocated
+	* Constructor
+	* Object existence
+
+* Null pointer exception
+* Function signature
+* Methods in Java
+	* Return type - void, int, class
+
