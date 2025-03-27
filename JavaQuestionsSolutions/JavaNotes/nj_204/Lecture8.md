@@ -153,3 +153,18 @@ System.out.println(sb); // Output: Hello World
 - **SCP optimizes memory** by reusing literals.
 - Use **`StringBuilder` or `StringBuffer`** when modifying strings frequently.
 
+
+## Array
+
+example
+```
+class  Array1
+{
+	public static void main(String[] args) 
+	{
+		int[] marks = new int[10];
+
+		System.out.println(marks);
+	}
+}
+```
