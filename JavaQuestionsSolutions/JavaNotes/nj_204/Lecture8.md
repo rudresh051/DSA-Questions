@@ -168,3 +168,72 @@ class  Array1
 	}
 }
 ```
+
+An **ArrayIndexOutOfBoundsException** occurs in Java when you try to access an index of an array that is either negative or greater than or equal to the array's length.  
+
+### **Example of ArrayIndexOutOfBoundsException**
+```java
+public class ArrayExample {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5}; 
+        
+        // Trying to access an invalid index
+        System.out.println(numbers[5]); // Index 5 is out of bounds (Valid indices: 0 to 4)
+    }
+}
+```
+### **Output**
+```
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 5
+```
+
+---
+
+### **Causes of ArrayIndexOutOfBoundsException**
+1. **Accessing an index that does not exist**  
+   ```java
+   int[] arr = new int[5];
+   System.out.println(arr[5]); // Error: Index 5 is out of bounds
+   ```
+   
+2. **Negative Index**  
+   ```java
+   int[] arr = {10, 20, 30};
+   System.out.println(arr[-1]); // Error: Negative indices are not allowed
+   ```
+   
+3. **Looping Beyond Array Limits**
+   ```java
+   int[] arr = {1, 2, 3};
+   for (int i = 0; i <= arr.length; i++) { // 'i <= arr.length' causes out of bounds
+       System.out.println(arr[i]); 
+   }
+   ```
+
+---
+
+### **How to Prevent ArrayIndexOutOfBoundsException**
+1. **Check array boundaries before accessing elements**
+   ```java
+   if (index >= 0 && index < arr.length) {
+       System.out.println(arr[index]);
+   } else {
+       System.out.println("Index out of bounds!");
+   }
+   ```
+   
+2. **Use `arr.length` in loops**
+   ```java
+   for (int i = 0; i < arr.length; i++) { // Use '<' instead of '<='
+       System.out.println(arr[i]);
+   }
+   ```
+
+3. **Use Enhanced For Loop (Recommended)**
+   ```java
+   for (int num : arr) {
+       System.out.println(num);
+   }
+   ```
+
+
