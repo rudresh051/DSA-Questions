@@ -6,7 +6,9 @@
 
 ## How to create
 
-String str1 = "Welcome to java";
+String str1 = "Welcome to java"; => **String Literal**
+
+char[] str = {'S','P', 'A'} => **String Array**
 
 ```
 class  String1
@@ -18,7 +20,7 @@ class  String1
 		System.out.println(str1);
 
 		// By using new operator
-		String str2 = new String("Welcome to Java");
+		String str2 = new String("Welcome to Java"); => String object
 		System.out.println(str2);
 
 		// What's the difference
@@ -43,6 +45,15 @@ public class StringPractise {
 
 }
 ```
+
+## String Pool
+What does that mean?
+String Pool is a storage area in JAVA Heap where only string literals stores.
+also known as String Intern Pool or String Constant Pool.
+String Caching
+Reusable Strings
+The distinctvalues are stored.
+
 
 ![alt text](image-8.png)
 
