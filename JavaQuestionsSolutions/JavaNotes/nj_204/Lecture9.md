@@ -69,3 +69,17 @@ e.g.
 ### String vs StringBuilder vs StringBuffer
 
 Parameter - Storage, Mutability, Thread Safe, Performance, Syntax
+
+
+| Parameter      | String                         | StringBuilder                  | StringBuffer                    |
+|--------------|--------------------------------|--------------------------------|--------------------------------|
+| **Storage**   | Stored in the **String Pool** (if created using literals) or **Heap Memory** (if created using `new`). | Stored in **Heap Memory**.    | Stored in **Heap Memory**.    |
+| **Mutability** | **Immutable** (Once created, cannot be changed). | **Mutable** (Can be modified without creating a new object). | **Mutable** (Can be modified without creating a new object). |
+| **Thread Safe** | **Thread-Safe** (Since it's immutable, it can be shared across multiple threads without issues). | **Not Thread-Safe** (Multiple threads may cause inconsistency). | **Thread-Safe** (Uses synchronized methods to ensure safe usage in multi-threaded environments). |
+| **Performance** | **Slow** (Every modification creates a new object, increasing memory usage). | **Fast** (Better performance than `String` and `StringBuffer` since it's not synchronized). | **Slower than `StringBuilder`** (Due to synchronization overhead). |
+| **Syntax** | `String str = "Hello";` <br> `str = str + " World";` | `StringBuilder sb = new StringBuilder("Hello");` <br> `sb.append(" World");` | `StringBuffer sbf = new StringBuffer("Hello");` <br> `sbf.append(" World");` |
+
+**Key Takeaways:**  
+- Use **String** when you need **constant/unchangeable values**.  
+- Use **StringBuilder** for **faster string manipulations in a single-threaded environment**.  
+- Use **StringBuffer** when **thread safety** is required but performance is still a concern.  
