@@ -105,12 +105,32 @@ class Gmail
 			System.out.println("both are different");
 		}
 
+    //example - 
     byte[] bytes = {100,102,103};
 		String str1 = new String(bytes);
 		System.out.println(str1);
 
+    // example - 
+    char chars1[] = {'r', 'u', 'd', 'r', 'a'};
+		String s = new String(chars1);
+		System.out.println(s);
+
+    // StringBuilder
+    StringBuilder s1 = new StringBuilder("ai");
+		System.out.println(s1);
+
+
 	}
 }
 ```
+
+## operations on strings
+
+1. int length()
+2. Char charAt(int i)
+3. String substring(int i)
+4. String substring(int i, int j)
+5. String concat(String str)
+6. int indexOf(String s)
 
 
