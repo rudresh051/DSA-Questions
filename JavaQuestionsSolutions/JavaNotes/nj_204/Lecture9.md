@@ -83,3 +83,34 @@ Parameter - Storage, Mutability, Thread Safe, Performance, Syntax
 - Use **String** when you need **constant/unchangeable values**.  
 - Use **StringBuilder** for **faster string manipulations in a single-threaded environment**.  
 - Use **StringBuffer** when **thread safety** is required but performance is still a concern.  
+
+
+* Example
+
+```java
+class Gmail 
+{
+	public static void main(String[] args) 
+	{
+		String name = "Shiv";
+		String name2 = new String("Shiv");
+
+		System.out.println(name);
+		System.out.println(name2);
+
+		if(name == name2){
+			System.out.println("both are same");
+		}
+		else{
+			System.out.println("both are different");
+		}
+
+    byte[] bytes = {100,102,103};
+		String str1 = new String(bytes);
+		System.out.println(str1);
+
+	}
+}
+```
+
+
