@@ -124,7 +124,7 @@ class Gmail
 }
 ```
 
-## operations on strings
+### operations on strings
 
 1. int length()
 2. Char charAt(int i)
@@ -132,5 +132,26 @@ class Gmail
 4. String substring(int i, int j)
 5. String concat(String str)
 6. int indexOf(String s)
+7. int indexOf(String s, int)
+8. int lastIndexOf(String s)
+9. boolean equals(Object otherObj)
+10. boolean equalsIgnoreCase(String anotherString)
+11. int compareToIgnoreCase(String anotherString)
+12. String toUpperCase()
+13. String trim()
+14. String replace(char oldChar, char newChar)
+15. char[] toCharArray()
 
+## Scanner Class in Java
+
+example
+
+```java
+public class Test{
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+    String name = input.nextLine();
+    System.out.println(name);
+  }
+}
 
