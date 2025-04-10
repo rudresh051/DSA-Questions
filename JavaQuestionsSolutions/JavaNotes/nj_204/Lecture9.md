@@ -144,6 +144,18 @@ class Gmail
 
 ## Scanner Class in Java
 
+The Scanner class is used to read the input data from different sources like input
+streams, users, files, etc. This Scanner class belongs to java.util package.
+
+
+The `System.in` parameter is used to take input from the standard input. It works just like taking input from the keyboard.
+
+`Scanner input = new Scanner(System.in);`
+
+To use the Scanner class inside our application, we need to import this class.
+
+`import java.util.Scanner;`
+
 example
 
 ```java
@@ -155,3 +167,20 @@ public class Test{
   }
 }
 
+
+### Java Scanner Methods to Take Input
+
+The `Scanner` class provides various methods that allow us to read inputs of different types.
+
+```txt
+nextInt() reads an int value from the user.
+nextFloat() reads a float value form the user.
+nextBoolean() reads a boolean value from the user
+nextLine() reads a line of text from the user
+next() reads a word from the user
+nextLine() reads a whole line
+nextByte() reads a byte value from the user
+nextDouble() reads a doubl e value from the user
+nextShort() reads a short value from the user.
+nextLong() reads a long value from the user
+```
