@@ -165,7 +165,7 @@ public class Test{
     String name = input.nextLine();
     System.out.println(name);
   }
-}
+} 
 
 
 ### Java Scanner Methods to Take Input
@@ -183,4 +183,31 @@ nextByte() reads a byte value from the user
 nextDouble() reads a doubl e value from the user
 nextShort() reads a short value from the user.
 nextLong() reads a long value from the user
+```
+
+
+Example - 
+
+```java
+import java.util.Scanner;
+class GmailRudra {
+	String email;
+	String password;
+
+	public static void main(String[] args) 
+	{
+		GmailRudra myGmail = new GmailRudra();
+
+		Scanner myinput = new Scanner(System.in);
+			
+		System.out.println("Enter Email:");
+		myGmail.email = myinput.nextLine();
+
+		System.out.println("Enter password:");
+		myGmail.password = myinput.nextLine();
+		
+		System.out.println("Email:" + myGmail.email);
+		System.out.println("Pass:" + myGmail.password);
+	}
+}
 ```
