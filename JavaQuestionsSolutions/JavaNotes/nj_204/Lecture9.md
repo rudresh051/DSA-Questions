@@ -211,3 +211,90 @@ class GmailRudra {
 	}
 }
 ```
+
+## JavaBean Class
+
+A **JavaBean** class is a special type of Java class that follows certain conventions and is mainly used to encapsulate many objects into a single object (the bean). JavaBeans are commonly used in enterprise applications, especially in frameworks like Spring, JSP, and others, for transferring and managing data.
+
+### ✅ **JavaBean Conventions**
+A class is considered a JavaBean if it meets these rules:
+
+1. **It must be public and have a no-argument constructor**  
+   ```java
+   public class Person {
+       public Person() { }
+   }
+   ```
+
+2. **It should have private fields**  
+   - This is to ensure encapsulation.
+   ```java
+   private String name;
+   private int age;
+   ```
+
+3. **It must provide public getter and setter methods**  
+   - These allow read/write access to the properties.
+   ```java
+   public String getName() {
+       return name;
+   }
+
+   public void setName(String name) {
+       this.name = name;
+   }
+
+   public int getAge() {
+       return age;
+   }
+
+   public void setAge(int age) {
+       this.age = age;
+   }
+   ```
+
+4. **It should be serializable (optional, but common)**  
+   - Often used to allow saving the state of the object.
+   ```java
+   public class Person implements Serializable {
+       ...
+   }
+   ```
+
+---
+
+### ✅ **Example of a JavaBean**
+```java
+public class Employee implements Serializable {
+    private String name;
+    private int id;
+    
+    // No-arg constructor
+    public Employee() { }
+
+    // Getters and setters
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+}
+```
+
+---
+
+### 🔄 **Why Use JavaBeans?**
+- Easy to manage data (especially in MVC frameworks).
+- Supports **introspection** (automatic property detection using reflection).
+- Works well with **JSP**, **Servlets**, **Spring**, and other Java EE frameworks.
+
