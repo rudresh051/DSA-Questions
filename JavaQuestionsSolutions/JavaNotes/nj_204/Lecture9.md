@@ -208,6 +208,13 @@ class GmailRudra {
 		
 		System.out.println("Email:" + myGmail.email);
 		System.out.println("Pass:" + myGmail.password);
+
+		if(myGmail.email.equals("rudreshwar@gmail.com") && myGmail.password.equals("1234567890")){
+			System.out.println("Welcome to Home page");
+		}
+		else{
+			System.out.println("Please enter correct credentials");
+		}
 	}
 }
 ```
@@ -217,6 +224,7 @@ class GmailRudra {
 A **JavaBean** class is a special type of Java class that follows certain conventions and is mainly used to encapsulate many objects into a single object (the bean). JavaBeans are commonly used in enterprise applications, especially in frameworks like Spring, JSP, and others, for transferring and managing data.
 
 ### ✅ **JavaBean Conventions**
+
 A class is considered a JavaBean if it meets these rules:
 
 1. **It must be public and have a no-argument constructor**  
@@ -297,4 +305,129 @@ public class Employee implements Serializable {
 - Easy to manage data (especially in MVC frameworks).
 - Supports **introspection** (automatic property detection using reflection).
 - Works well with **JSP**, **Servlets**, **Spring**, and other Java EE frameworks.
+
+
+
+### Example
+
+```java
+import java.util.Scanner;
+import java.util.ArrayList;
+
+class GmailRudra {
+
+	ArrayList<JavaBean> accounts = new ArrayList<JavaBean>();
+	
+
+	public static void main(String[] args) 
+	{
+		GmailRudra myGmail = new GmailRudra();
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter 1 to Register or Enter 2 for signin");
+		
+
+		int choice = scanner.nextInt();
+		scanner.nextLine();// consume the leftover line
+
+		if(choice == 1){
+		// show him register form
+
+		// create object of JavaBean class. I guess I need to import it.
+		JavaBean user = new JavaBean();
+
+		System.out.println("Enter username");
+		user.setName(scanner.nextLine());
+
+		System.out.println("Enter Address");
+		user.setAddress(scanner.nextLine());
+
+		System.out.println("Enter user email");
+		user.setEmail(scanner.nextLine());
+
+		System.out.println("Enter user password");
+		user.setPassword(scanner.nextLine());
+
+		// arraylist has a method add. arraylist is basically an array
+		myGmail.accounts.add(user);
+
+		}
+		else{
+		// Login form
+		System.out.println("Enter user email");
+		String email = scanner.nextLine(); // using local variable here
+
+		System.out.println("Enter user password");
+		String password = scanner.nextLine();
+
+
+		if(myGmail.accounts.size() > 0){
+			for(int i=0; i<myGmail.accounts.size(); i++){
+				if(myGmail.accounts.get(i).getEmail().equals(email) && 
+					myGmail.accounts.get(i).getPassword().equals(password)	
+				){
+					System.out.println("Welcome " + myGmail.accounts.get(i).getName());
+					break;
+				
+				}
+				else{
+					System.out.println("Please register");
+				}
+			}
+		}
+
+		}
+	}
+}
+```
+
+
+```java
+class JavaBean 
+{
+	private String name;
+	private String email;
+	private String password;
+	private String address;
+
+
+
+	// getters
+	public String getName(){
+		return name;
+	}
+	public String getEmail(){
+		return email;
+	}
+	public String getPassword(){
+		return password;
+	}
+	public String getAddress(){
+		return address;
+	}
+
+	// setters
+	public void setName(String name){
+		this.name = name;
+	}
+
+	public void setEmail(String email){
+		this.email = email;
+	}
+	public void setPassword(String password){
+		this.password = password;
+	}
+	public void setAddress(String address){
+		this.address = address;
+	}
+
+
+
+	
+	public static void main(String[] args) 
+	{
+		System.out.println("test");		
+	}
+}
+```
 
