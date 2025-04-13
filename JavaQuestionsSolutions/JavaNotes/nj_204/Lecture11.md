@@ -28,6 +28,19 @@ class ArrayExamples
 			System.out.println(val);
 		}	
 
+        		
+		// in reverse order
+		for(int i=array2.length-1; i>=0;i--){
+			System.out.println(array2[i]);
+		}
+
+        // sum of array
+		int sum = 0;
+		for(int data : array2){
+			sum = sum + data;
+		}
+		System.out.println("sum = " + sum);
+
 	}
 }
 ```
