@@ -235,3 +235,36 @@ class Dog extends Animal
 	}
 }
 ```
+
+## Class cast exception
+
+```
+class Dog extends Animal
+{
+
+	@Override
+	void eat(){
+		System.out.println("Dog can eat..."); 
+	}
+
+	// child class can have it's own method as well
+	void display(){
+		System.out.println("inside display method of dog class");
+	}
+
+	public static void main(String[] args) 
+	{
+		// Dynamic polymorphism
+		Animal a = new Animal(); // We are assigning Dog overridden method
+		a.eat();	
+
+		//a.display();// this method cannot be called
+		// In order to call display method
+		// create dog object 
+		// or by Downcasting
+
+		Dog d = (Dog)a;
+		d.display();
+	}
+}
+```
