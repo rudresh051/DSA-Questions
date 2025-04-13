@@ -148,3 +148,90 @@ class Dog extends Animal
 	}
 }
 ```
+
+## Runtime polymorphism
+
+super class ref and child class obj.
+
+Animal a = new Dog();// upcasting
+
+example - 
+
+```java
+class Animal 
+{
+	void eat(){
+		System.out.println("I can eat");
+	}
+}
+```
+
+
+```java
+class Dog extends Animal
+{
+
+	@Override
+	void eat(){
+		System.out.println("Dog can eat..."); 
+	}
+
+	// child class can have it's own method as well
+	void display(){
+		System.out.println("inside display method of dog class");
+	}
+
+	public static void main(String[] args) 
+	{
+		// Dynamic polymorphism
+		Animal a = new Dog(); // We are assigning Dog . overridden method
+		a.eat();	
+	}
+}
+```
+
+## Downcasting
+Animal.java
+```java
+class Animal 
+{
+	void eat(){
+		System.out.println("I can eat");
+	}
+}
+```
+
+
+
+
+Dog.java
+```java
+class Dog extends Animal
+{
+
+	@Override
+	void eat(){
+		System.out.println("Dog can eat..."); 
+	}
+
+	// child class can have it's own method as well
+	void display(){
+		System.out.println("inside display method of dog class");
+	}
+
+	public static void main(String[] args) 
+	{
+		// Dynamic polymorphism
+		Animal a = new Dog(); // We are assigning Dog overridden method
+		a.eat();	
+
+		a.display();// this method cannot be called
+		// In order to call display method
+		// create dog object 
+		// or by Downcasting to a appropriate child class object
+
+		Dog d = (Dog)a;
+		d.display();
+	}
+}
+```
