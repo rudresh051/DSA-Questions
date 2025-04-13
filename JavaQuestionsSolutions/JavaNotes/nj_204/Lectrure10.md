@@ -51,3 +51,100 @@ public class TestInheritance {
 3. **Hierarchical Inheritance**
 
 > 🚫 **Note:** Java doesn't support **multiple inheritance with classes** (to avoid ambiguity), but you can achieve it using **interfaces**.
+
+<!-- ______________ -->
+
+A--parent class or super class
+|
+B--child or sub class
+
+Is-A relationship
+
+Bike is-A Vehicle
+Dog Is-A Animal
+
+* Bike is-A Vehicle
+* Dog Is-A Animal
+
+1. Code reusability
+2. Runtime polymorphism
+   
+
+Example - 
+Animal.java
+
+```java
+class Animal 
+{
+	int age;
+
+	void eat(){
+		System.out.println("I can eat");
+	}
+}
+```
+
+Dog.java
+```java
+class Dog extends Animal
+{
+	
+	// child class can have it's own method as well
+	void display(){
+		System.out.println("My age is "+ age);
+	}
+
+	@Override
+	void eat(){
+		System.out.println("Dog can eat...");
+	}
+	public static void main(String[] args) 
+	{
+		Dog d = new Dog();
+		
+		d.eat();
+
+		d.age = 2;
+		d.display();
+	}
+}
+```
+
+## Super keyword
+
+
+
+Animal.java
+```java
+class Animal 
+{
+	int age;
+	void eat(){
+		System.out.println("I can eat");
+	}
+}
+```
+
+Dog.java
+```java
+class Dog extends Animal
+{
+
+	@Override
+	void eat(){
+		System.out.println("Dog can eat..."); 
+	}
+
+	// child class can have it's own method as well
+	void display(){
+		System.out.println("My age is "+ age);
+		super.eat(); // super will call the immediate parent class object
+	}
+
+	public static void main(String[] args) 
+	{
+		Dog d = new  Dog();
+		d.display();
+	}
+}
+```
