@@ -65,6 +65,15 @@ class MultiDimArray
 
 		// to access 7
 		System.out.println(multiDimen2[2][0]);
+
+		// assigning values
+		multiDimen2[2][0] = 79;
+		System.out.println(multiDimen2[2][0]);
+
+		// using loops
+		for(int i=0;i<3;i++){
+			System.out.println(multiDimen2[i][i]);
+		}
 	}
 }
 ```
