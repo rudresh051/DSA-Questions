@@ -44,3 +44,27 @@ class ArrayExamples
 	}
 }
 ```
+
+## Multi Dimension Array
+example - 
+
+```java
+class MultiDimArray 
+{
+	public static void main(String[] args) 
+	{
+		// Single
+		int[] array = new int[10];
+		int[][] multiArray = new int[3][3];
+
+		int[][] multiDimen2 = {
+			{1,2,3}, // 00 01 02
+			{4,5,6}, // 10 11 12
+			{7,8,9}	 // 20 21 22
+		};
+
+		// to access 7
+		System.out.println(multiDimen2[2][0]);
+	}
+}
+```
