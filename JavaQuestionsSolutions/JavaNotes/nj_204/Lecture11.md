@@ -77,3 +77,21 @@ class MultiDimArray
 	}
 }
 ```
+## Sum of natural numbers
+
+```java
+public class NaturalNumberSum {
+
+    // Static method to calculate sum of first N natural numbers
+    public static int calculateSum(int number) {
+        return (number * (number + 1)) / 2;
+    }
+
+    // Main method to call the calculateSum method and print the result
+    public static void main(String[] args) {
+        int num = 5; // You can change this to any number you want
+        int result = calculateSum(num);
+        System.out.println("The sum of the first " + num + " natural numbers is: " + result);
+    }
+}
+```
