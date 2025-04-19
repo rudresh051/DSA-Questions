@@ -74,6 +74,17 @@ class MultiDimArray
 		for(int i=0;i<3;i++){
 			System.out.println(multiDimen2[i][i]);
 		}
+
+
+		// printing 2-dim array elements
+		for(int row=0; row<3;row++){
+			for(int col = 0;col<3;col++){
+				System.out.println("row: " + row + ", col: " + col);
+				System.out.println(multiDimen2[row][col]);
+			}
+
+			System.out.println("_________________________");
+		}
 	}
 }
 ```
@@ -93,5 +104,35 @@ public class NaturalNumberSum {
         int result = calculateSum(num);
         System.out.println("The sum of the first " + num + " natural numbers is: " + result);
     }
+}
+```
+
+## Java Switch case
+```java
+class SwitchCaseExample 
+{
+	public static void main(String[] args) 
+	{
+	
+		int value = 2;
+
+		switch(2){
+			case 1:{
+				System.out.println("One");
+			}
+			break;
+			case 2 :{
+				System.out.println("Two");
+			}
+			break;
+			case 3 :{
+				System.out.println("Three");
+			}
+			break;
+			default:{
+				System.out.println("default");
+			}
+		}
+	}
 }
 ```
