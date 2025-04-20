@@ -199,6 +199,13 @@ class ArrayAsParameter
 
 		int[] a = obj1.getArray();
 		System.out.println(a);
+		obj1.printSumOfArray(a);
+
 	}
 }
 ```
+output - 
+C:\JavaPrograms>java ArrayAsParameter
+60
+[I@372f7a8d
+400
