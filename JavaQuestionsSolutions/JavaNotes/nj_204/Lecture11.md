@@ -164,3 +164,41 @@ class ArrayAsParameter
 	}
 }
 ```
+
+example - returning array
+
+```java
+class ArrayAsParameter 
+{
+	String name;
+	String address;
+	int[] numbers;
+
+	void printSumOfArray(int[] numbers){
+		int sum = 0;
+		for(int i=0; i<numbers.length;i++){
+			sum+= numbers[i];
+		}
+			System.out.println(sum);
+	}
+
+	int[] getArray(){
+		int[] array2 = {100,300};
+		return array2;
+	}
+
+	
+	public static void main(String[] args) 
+	{
+		int[] array = {10,20,30};
+
+		ArrayAsParameter obj1 = new ArrayAsParameter();
+		obj1.printSumOfArray(array);
+
+		obj1.getArray();
+
+		int[] a = obj1.getArray();
+		System.out.println(a);
+	}
+}
+```
