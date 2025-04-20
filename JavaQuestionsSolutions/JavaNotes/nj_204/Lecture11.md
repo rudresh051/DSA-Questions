@@ -136,3 +136,31 @@ class SwitchCaseExample
 	}
 }
 ```
+
+## Array As parameter
+```java
+class ArrayAsParameter 
+{
+	String name;
+	String address;
+	int[] numbers;
+
+	void printSumOfArray(int[] numbers){
+		int sum = 0;
+		for(int i=0; i<numbers.length;i++){
+			sum+= numbers[i];
+		}
+			System.out.println(sum);
+	}
+
+
+	
+	public static void main(String[] args) 
+	{
+		int[] array = {10,20,30};
+
+		ArrayAsParameter obj1 = new ArrayAsParameter();
+		obj1.printSumOfArray(array);
+	}
+}
+```
