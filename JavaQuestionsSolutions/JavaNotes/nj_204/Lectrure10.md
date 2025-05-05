@@ -1,5 +1,7 @@
 ## Inheritance
 
+![alt text](image-13.png)
+
 Inheritance in Java is a **fundamental object-oriented programming concept** that allows one class to **inherit properties and behaviors (fields and methods)** from another class.
 
 ![alt text](image-11.png)
