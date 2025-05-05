@@ -270,3 +270,8 @@ class Dog extends Animal
 	}
 }
 ```
+
+* Methods of Parent class can also accessed by creating object of parent class in child class. This way inheritance can be removed.
+* Father => Son => Grandson
+  * If Grandson extends Son class and Son class extends Father class then Grandson will automatically inherit properties of Father class
+* 
