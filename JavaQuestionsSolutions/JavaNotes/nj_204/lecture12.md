@@ -14,3 +14,35 @@ Hierarchical Inheritance: Multiple classes inherit from a single parent class.
 (Java does not support multiple inheritance with classes to avoid ambiguity; instead, it supports multiple inheritance through interfaces.)
 
 ![alt text](image-12.png)
+
+Example - 
+Father.java
+```java
+class Father 
+{
+	String skinTone = "Brown";
+	void drinks(){
+		System.out.println("I like water")
+	}	
+}
+```
+SimpleClass.java
+```java
+public class SimpleClass extends Father
+{
+	String = "Shiv";
+
+	void greet(){
+		System.out.println("greet")
+	}
+
+	public static void main(String[] args) 
+	{
+		SimpleClass obj = new SimpleClass();
+		obj.greet();
+
+		obj.drinks();
+	}
+}
+```
+
