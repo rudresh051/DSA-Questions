@@ -61,3 +61,32 @@ class GrandSon extends SonClass
 All the properties are inherited by child class can have it's own thing
 
 * Use `@Override` mentioning explicitely in child class if child class changes parent method
+
+
+Downcasting  - 
+```
+public class SonClass extends Father
+{
+	String name = "Shiv";
+
+	void greet(){
+		System.out.println("greet");
+	}
+
+	public static void main(String[] args) 
+	{
+		SonClass obj = new SonClass();
+		obj.greet();
+
+		obj.drinks();
+
+		Father father2 = new SonClass();
+		father2.drinks();
+
+		//SonClass sonObj = new Father();// you cannot create SonClass object
+		// using Father Class
+
+		SonClass sunObj = (SonClass) father2;
+	}
+}
+```
