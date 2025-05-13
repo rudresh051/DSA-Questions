@@ -58,3 +58,6 @@ class GrandSon extends SonClass
 	}
 }
 ```
+All the properties are inherited by child class can have it's own thing
+
+* Use `@Override` mentioning explicitely in child class if child class changes parent method
