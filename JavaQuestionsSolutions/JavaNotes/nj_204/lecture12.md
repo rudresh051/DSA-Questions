@@ -15,7 +15,7 @@ Hierarchical Inheritance: Multiple classes inherit from a single parent class.
 
 ![alt text](image-12.png)
 
-Example - 
+Example - Multilevel Inheritance
 Father.java
 ```java
 class Father 
@@ -26,9 +26,9 @@ class Father
 	}	
 }
 ```
-SimpleClass.java
+SonClass.java
 ```java
-public class SimpleClass extends Father
+public class SonClass extends Father
 {
 	String = "Shiv";
 
@@ -38,7 +38,7 @@ public class SimpleClass extends Father
 
 	public static void main(String[] args) 
 	{
-		SimpleClass obj = new SimpleClass();
+		SonClass obj = new SonClass();
 		obj.greet();
 
 		obj.drinks();
@@ -46,3 +46,15 @@ public class SimpleClass extends Father
 }
 ```
 
+GrandSon.java
+```java
+class GrandSon extends SonClass
+{
+	public static void main(String[] args) 
+	{
+		GrandSon grandSon = new GrandSon();
+
+		grandSon.drinks();
+	}
+}
+```
