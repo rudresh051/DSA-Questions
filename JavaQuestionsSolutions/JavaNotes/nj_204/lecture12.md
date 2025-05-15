@@ -388,3 +388,82 @@ class MyUtility extends Utility { // ❌ Error: Cannot subclass final class
 | `final` variable | Value can't be changed after initialization |
 | `final` method   | Cannot be overridden in a subclass          |
 | `final` class    | Cannot be subclassed                        |
+
+
+## Model Class
+
+```java
+class ModelClass 
+{
+	String name = "rudresh";
+	String address = "BLR";
+
+	ModelClass(String n, String a){
+		name = n;
+		address = a;
+	}
+
+	@Override
+	public String toString(){
+		return name + " " + address;
+	}
+}
+```
+
+```java
+class Normal 
+{
+
+	A getNewObject(int objNumber){
+			return new A();
+		}
+
+		B getNewObjectB(int objNumber){
+			return new B();
+		}
+
+
+		//if only I want have one function
+		// I cannot have 2 return type
+
+
+		// return type object
+		Object getAnyNewObj(int objNum){
+			if(objNum == 1){
+				return new A();
+			}else{
+				return new B();
+			}
+		}
+
+	public static void main(String[] args) 
+	{
+		A a = new B();
+		B b2 = (B)a;
+
+		if(a instanceof A){
+			// left side is => object
+			// right side is => class
+			System.out.println("true");
+			System.out.println(a);
+		}
+		else{
+			System.out.println("False");
+			System.out.println(a);
+		}
+
+
+		B b = new B();
+
+		// b.fun1();
+
+		Normal normal = new Normal();
+		A aObj = (A) normal.getAnyNewObj(1);
+
+		ModelClass mdObj = new ModelClass("rudresh", "blr");
+		//System.out.println(mdObj.toString());
+		System.out.println(mdObj.toString());
+
+	}
+}
+```
