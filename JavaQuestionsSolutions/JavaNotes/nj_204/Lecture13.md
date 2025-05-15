@@ -163,3 +163,55 @@ class GrandChild extends ChildClass
 	}
 }
 ```
+
+Example - 
+```java
+class Student 
+{
+	String name;
+	String lastName;
+	int id;
+
+	// create getter
+	public String getName(){
+		return name;
+	}
+
+	public String getLastName(){
+		return lastName;
+	}
+
+	public int getId(){
+		return id;
+	}
+
+	// create setter
+	public void setName(String name){
+		this.name = name;
+	}
+	public void setLastName(String lastName){
+		this.lastName = lastName;
+	}
+	public void setId(int id){
+		this.id = id;
+	}
+}
+```
+
+```java
+class Solution 
+{
+	public static void main(String[] args) 
+	{
+		//Student student1 = new Student();
+		//or
+
+		Object object = new Student();
+
+		System.out.println(object.getClass());
+		System.out.println(object.hashCode());
+		System.out.println(object.toString());
+		System.out.println(object.equals(object2));
+	}
+}
+```
