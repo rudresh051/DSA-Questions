@@ -91,7 +91,7 @@ public class SonClass extends Father
 }
 ```
 
-Example - 
+Example - `Class A → Class B → Class C`
 
 ```java
 // Base class (Parent)
