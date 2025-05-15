@@ -195,6 +195,11 @@ class Student
 	public void setId(int id){
 		this.id = id;
 	}
+    @Override
+	public String toString(){
+		String value = "Name = " + and Lastname = " + lastName;
+		return value;
+	}
 }
 ```
 
