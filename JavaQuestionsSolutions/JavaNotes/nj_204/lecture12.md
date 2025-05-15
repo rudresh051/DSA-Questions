@@ -90,3 +90,40 @@ public class SonClass extends Father
 	}
 }
 ```
+
+Example - 
+
+```java
+// Base class (Parent)
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+// Derived class (Child of Animal)
+class Dog extends Animal {
+    void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+// Another derived class (Child of Dog, Grandchild of Animal)
+class Puppy extends Dog {
+    void weep() {
+        System.out.println("The puppy weeps.");
+    }
+}
+
+// Main class to test multilevel inheritance
+public class MultilevelInheritanceDemo {
+    public static void main(String[] args) {
+        Puppy puppy = new Puppy();
+
+        // Methods from all three classes
+        puppy.eat();   // from Animal
+        puppy.bark();  // from Dog
+        puppy.weep();  // from Puppy
+    }
+}
+```
