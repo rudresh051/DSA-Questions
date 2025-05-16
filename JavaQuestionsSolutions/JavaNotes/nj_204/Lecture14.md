@@ -23,3 +23,7 @@ interface Intr{
 
 }
 ```
+
+Note - We can not create an interface object directly, we always create object of the implemented concrete class.
+
+Interface is also one type of user-defined data type, so we can declare its variable also.
