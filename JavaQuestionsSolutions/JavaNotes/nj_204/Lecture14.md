@@ -25,7 +25,6 @@ interface Intr{
 }
 ```
 
-
 --as we extends a class inside another class, we implement an interface inside another class.  
 --if a class is implementing an **interface** , then that class must   override all the abstract methods present inside that interface otherwise we need to mark that implementation class as **abstract class**.
 
@@ -51,8 +50,6 @@ example -
 ```java
 class Main 
 {
-
-
 	static void fun1(int... i){
 		System.out.println("inside fun1 of Main");
 		for(int a:i){
