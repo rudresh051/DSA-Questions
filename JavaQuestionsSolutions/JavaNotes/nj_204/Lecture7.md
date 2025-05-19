@@ -294,6 +294,47 @@ Start using constructors more often — it will help you think in an **object-or
 Let me know if you want to try a small challenge to reinforce constructor usage 👨‍💻
 
 
+✅ Example Code
+```java
+import java.util.*;
+
+class ChefDish {
+    String ingredient;  // This is like the variable you want to work with
+
+    // 👨‍🍳 Constructor: Chef receives the ingredient from the user
+    public ChefDish(String ingredient) {
+        this.ingredient = ingredient;
+        System.out.println("Chef received: " + ingredient);
+    }
+
+    // Method to prepare a dish using the ingredient
+    public void prepareDish() {
+        if (ingredient.equalsIgnoreCase("Potato")) {
+            System.out.println("Preparing French Fries 🍟");
+        } else if (ingredient.equalsIgnoreCase("Tomato")) {
+            System.out.println("Preparing Tomato Soup 🍅🥣");
+        } else {
+            System.out.println("Chef is still experimenting with: " + ingredient);
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter an ingredient for the chef:");
+        String userInput = scanner.nextLine();
+
+        // 👇 Chef gets the ingredient when object is created
+        ChefDish dish = new ChefDish(userInput);
+
+        // 👨‍🍳 Chef is ready to cook right away
+        dish.prepareDish();
+    }
+}
+```
+
 ## Summary
 
 * Class Collaboration
