@@ -54,21 +54,21 @@ java supports total 8 primitive data types under 4 category:-
 
 ## Type Casting
 
-The procedure of converting one data type into its equivallent another data type is
+The procedure of **converting one data type into its equivallent another data type** is
 known as typecasting.
 
-Note:- we can not typecast any datatype to any other data type, we can typecast only
-equivallent /compatible types.
+**Note** -  we can not typecast any datatype to any other data type, we can typecast only
+equivalent /compatible types.
 
---we have 2 types of typecasting:-
+we have 2 types of typecasting:-
 
-* Implicit typecasting :- (upcasting/ widening)
+* **Implicit typecasting** - (upcasting/ widening)
   * smaller datatype value into the bigger data type ex:- from int to long
 
 int x=10;
 long y=x;
 
-* Explicit typecasting (downcasting/narrowing)
+* **Explicit typecasting** (downcasting/narrowing)
   * Bigger datatype value into its equivalent smaller data type
   * e.g. into to byte
   * int x = 10;
@@ -137,18 +137,81 @@ class Demo
   // max(int,byte,int)
  }
 }
-
-
 ```
 
 doing b++ will not any error  
 internal typecasting will happen
 
-## User - Defined data types
+## User-Defined data types
+In Java, **user-defined data types** are types that programmers create to represent and   
+structure data in a way that suits their specific application needs. Unlike built-in   (primitive) data types like `int`, `char`, `boolean`, etc., user-defined data types are   
+built using Java’s object-oriented features.
 
-* Here we can take class, interface, enum, etc as userdefined data types.
-* Employee emp;
-* int x;
+### Types of User-Defined Data Types in Java:
+
+#### 1. **Classes**
+
+* A class is a blueprint for creating objects.
+* It can include fields (variables) and methods (functions).
+* Example:
+
+  ```java
+  class Person {
+      String name;
+      int age;
+
+      void greet() {
+          System.out.println("Hello, my name is " + name);
+      }
+  }
+  ```
+
+#### 2. **Interfaces**
+
+* An interface defines a contract with abstract methods.
+* Classes can implement interfaces to define specific behavior.
+* Example:
+
+  ```java
+  interface Animal {
+      void makeSound();
+  }
+
+  class Dog implements Animal {
+      public void makeSound() {
+          System.out.println("Bark");
+      }
+  }
+  ```
+
+#### 3. **Enums (Enumerations)**
+
+* An enum is a special Java type used to define collections of constants.
+* Example:
+
+  ```java
+  enum Day {
+      MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY;
+  }
+  ```
+
+#### 4. **Records** (Java 14+ as a preview, Java 16+ officially)
+
+* A compact syntax for declaring immutable data classes.
+* Example:
+
+  ```java
+  record Point(int x, int y) {}
+  ```
+
+---
+
+### Why Use User-Defined Data Types?
+
+* To model real-world entities (like `Employee`, `Order`, `Product`, etc.)
+* For better **modularity**, **reusability**, and **readability**
+* To apply **Object-Oriented Programming (OOP)** principles like encapsulation and abstraction
+
 
 ## Wrapper classes
 
