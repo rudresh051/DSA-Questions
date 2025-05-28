@@ -336,6 +336,16 @@ public class Main {
 ```
 
 ## Constructor Chaining
+* Constructor can call other constructors of the
+same class or superclass
+* Constructor call from a constructor must be
+the first step. (call should appear in the first
+line)
+* Such series of invocation of constructors is
+known as constructor chaining.
+* super() or this() 
+  * First line of constructor is either super() or this()(by default super())
+  * Constructor never contains super() and this() both
 Explain the output of below program - 
 A1  
 B2  
