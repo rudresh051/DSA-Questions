@@ -335,6 +335,42 @@ public class Main {
 }
 ```
 
+## Constructor Chaining
+Explain the output of below program - 
+A1  
+B2  
+B1  
+```java
+class A
+{
+	public A(){
+
+		System.out.println("A 1");
+	}
+}
+
+class B extends A
+{
+	public B(){
+		//super();// if we don't write this
+		// compiler will automatically write
+		this(4);// here this represent same class constructor
+		System.out.println("B 1");
+	}
+	public B(int k){
+		System.out.println("B 2");
+	}
+
+}
+
+public class Example
+{
+	public static void main(String[] args){
+		B o1 = new B();
+	}
+}
+```
+
 ## Summary
 
 * Class Collaboration
