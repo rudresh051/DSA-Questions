@@ -104,3 +104,65 @@ class Dog extends Animal {
 | Has method body     | ✅ Yes (some methods)   | ❌ No (must be overridden)              |
 | Purpose             | Base for other classes | Enforce specific method implementation |
 
+## Java Interface
+
+In Java, an **interface** is a reference type, similar to a class, that can contain only **constants**, **method signatures**, **default methods**, **static methods**, and **nested types**. Interfaces **cannot contain instance fields or constructors**, and all methods are **implicitly public and abstract** (except static and default methods).
+
+### Key Points:
+
+* **Used to achieve abstraction and multiple inheritance** in Java.
+* An interface defines **what a class can do**, but not **how it does it**.
+* A class implements an interface using the `implements` keyword and must provide concrete implementations of the interface’s methods (unless the class is abstract).
+
+---
+
+### Syntax Example:
+
+```java
+interface Animal {
+    void eat();
+    void sleep();
+}
+```
+
+### Implementing an Interface:
+
+```java
+class Dog implements Animal {
+    public void eat() {
+        System.out.println("Dog eats bones");
+    }
+
+    public void sleep() {
+        System.out.println("Dog sleeps at night");
+    }
+}
+```
+
+---
+
+### Interface Features (Java 8 and above):
+
+* **Default Methods**: Provide a default implementation.
+
+  ```java
+  default void breathe() {
+      System.out.println("Breathing...");
+  }
+  ```
+* **Static Methods**: Can be called on the interface itself.
+
+  ```java
+  static void sound() {
+      System.out.println("Animal sound");
+  }
+  ```
+* **Private Methods (Java 9+)**: For internal use within the interface.
+
+---
+
+### When to Use an Interface:
+
+* When you want to define a **contract** for classes.
+* When multiple classes should implement **common behavior** without being in the same inheritance hierarchy.
+* When you need **multiple inheritance of type**, as Java doesn’t support multiple class inheritance.
