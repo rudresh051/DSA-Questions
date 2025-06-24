@@ -1,38 +1,40 @@
 # Abstract Class
 
---abstract method is also called as unimplemented method.
---normal method is also called as implemented method or concrete method.
+* Abstract method is also called as **unimplemented method.**
+* Normal method is also called as implemented method or concrete method.
 
+```
 public void funA() // method signature
 { //method body
 
-this body can contains zero or many statements
+// this body can contains zero or many statements
 
 }
-
-
---the method which is having a method body is known as implemented or concrete method.(at least zero body)
-
---the method without body (only singnature) is called as unimplemened  method or abstract method.
---abstract keyword must be there in that method signature.
-
-
+```
+* The method which is **having a method body** is known as **implemented or concrete method.**(at least zero body)
+* The method **without body** (only singnature will be there) is called as **unimplemened  method or abstract method.**
+  * abstract keyword must be there in that method signature.
+```
 public abstract void funA();
+```
+**Note**: inside a normal class (in concrete class) we can not have any abstract methods.
 
-****Note: inside a normal class (in concreate class) we can not have any abstract methods.
+## Dynamic Polymorphism
 
-Abstract class:
+
+
+## Abstract class:
 ===========
-Encapsulation
-Polymorphism
-Inheritance
+Encapsulation  
+Polymorphism  
+Inheritance  
 Abstraction :
 
 ### Abstract Class and Abstract Method – Simple Explanation
 
 ---
 
-#### 🔹 **Abstract Class:**
+#### **Abstract Class:**
 
 An **abstract class** is a class that **cannot be instantiated directly** (i.e., you can’t create an object of it). It is meant to be a **blueprint** for other classes.
 
