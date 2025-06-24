@@ -1,4 +1,4 @@
-* Example 1 - 
+### Example 1 - 
 
 ```java
 class Demo 
@@ -20,7 +20,7 @@ class Demo
 }
 ```
 
-* Example 2 - 
+### Example 2 - 
 
 
  ```java
@@ -56,7 +56,20 @@ class Demo
 }
 ```
 
-* Example 3 - null pointer exception
+### Example 3 - null pointer exception
+
+```java
+class A 
+{
+	int i=10;
+
+	void funA(){
+		System.out.println("inside funA of A");
+	}
+}
+```
+
+
 
 ```java
 class Demo 
@@ -91,7 +104,7 @@ class Demo
 }
 ```
 
-more robust method
+more robust method  
 
 ```java
 class Demo 
@@ -130,4 +143,76 @@ class Demo
 
 	}
 }
+```
+
+### Example 4 - 
+
+```java
+class A 
+{
+	int i=10;
+
+	void funA1(){
+		System.out.println("inside funA of A1");
+	}
+
+	void funA2(){
+		System.out.println("inside funA of A2");
+	}
+}
+
+```
+
+```java
+class B extends A
+{
+	public void funB(){
+		System.out.println("inside funB of B");
+	}
+
+
+	@Override
+	void funA1(){
+		System.out.println("inside funA! of B class");
+	}
+}
+```
+
+```java
+class Demo 
+{
+	public void fun1(A a1){
+
+		// robust method
+		if(a1 !=null){
+			System.out.println("inside fun1 of Demo");
+			System.out.println("the value of a1 is" + " " + a1);
+			a1.funA1(); // funA1 is common in both Class A and Class B . which one will be called? Overridden will be called
+			a1.funA2();
+		}
+		else{
+			System.out.println("Don't pass null value");
+		}
+	}
+
+	public static void main(String[] args) 
+	{
+		Demo d1 = new Demo();
+
+
+		// same class object
+		//d1.fun1(new A());
+
+		// child class object
+		d1.fun1(new B());
+
+	}
+}
+```
+
+```txt
+inside fun1 of Demo
+the value of a1 is B@28a418fc
+inside funA! of B class
+inside funA of A2
 ```
