@@ -163,3 +163,16 @@ class Demo
 	}
 }
 ```
+
+* First write `.java` file(i.e. source code)
+* Then compile it => **Java compiler** will **compile** it.
+* After compilation it will give `.class` file
+* `.class` file contains byte code
+* Then give `.class` file to **jvm** which will **execute/run** the code
+
+* IDE automatically compile internally
+  
+
+* Function of compiler
+  * Scan the code e.g. syntax error
+  * It gives a free constructor or default or zero argument constructor
