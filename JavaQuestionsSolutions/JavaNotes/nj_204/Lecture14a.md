@@ -176,3 +176,39 @@ class Demo
 * Function of compiler
   * Scan the code e.g. syntax error
   * It gives a free constructor or default or zero argument constructor
+
+
+## Static Polymorphism
+Static polymorphism in Java refers to method overloading, where the method that gets called is determined at compile time, not at runtime.
+
+Definition - Static polymorphism allows a class to have multiple methods with the same name but different parameter lists (i.e., method signatures).
+
+This is called compile-time polymorphism because the Java compiler determines which method to call based on the number, types, or order of parameters.	
+
+```java
+public class Calculator {
+
+    // Method with two int parameters
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Overloaded method with three int parameters
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Overloaded method with double parameters
+    public double add(double a, double b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+
+        System.out.println(calc.add(2, 3));          // calls add(int, int)
+        System.out.println(calc.add(2, 3, 4));       // calls add(int, int, int)
+        System.out.println(calc.add(2.5, 3.5));      // calls add(double, double)
+    }
+}
+```
