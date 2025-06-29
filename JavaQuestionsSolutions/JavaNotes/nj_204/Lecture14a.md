@@ -212,3 +212,69 @@ public class Calculator {
     }
 }
 ```
+
+**Dynamic polymorphism** in Java refers to **method overriding**, where the method that gets called is determined **at runtime** based on the **object type**, not the reference type.
+
+
+### Definition:
+
+Dynamic polymorphism (also called **runtime polymorphism**) occurs when a **subclass provides a specific implementation** of a method that is already defined in its superclass. The method that is actually executed is resolved at **runtime**, based on the actual object, not the reference.
+
+### Example:
+
+```java
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal a1 = new Dog();   // Reference type: Animal, Object type: Dog
+        Animal a2 = new Cat();   // Reference type: Animal, Object type: Cat
+
+        a1.sound(); // Output: Dog barks
+        a2.sound(); // Output: Cat meows
+    }
+}
+```
+
+---
+
+### Key Points:
+
+* Also called **method overriding**.
+* Resolved **at runtime**, hence **dynamic**.
+* Requires:
+
+  * **Inheritance**
+  * **Method overriding**
+  * **Upcasting** (using superclass reference to point to subclass object)
+* Promotes **flexibility and extensibility** in object-oriented design.
+
+---
+
+### 🔄 Difference from Static Polymorphism:
+
+| Feature         | Static Polymorphism       | Dynamic Polymorphism |
+| --------------- | ------------------------- | -------------------- |
+| Also known as   | Compile-time polymorphism | Runtime polymorphism |
+| Achieved by     | Method overloading        | Method overriding    |
+| Resolution time | Compile time              | Runtime              |
+| Binding         | Early binding             | Late binding         |
+| Flexibility     | Less flexible             | More flexible        |
