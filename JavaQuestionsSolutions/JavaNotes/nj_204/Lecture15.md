@@ -24,7 +24,6 @@ public abstract void funA();
 
 
 ## Abstract class:
-===========
 Encapsulation  
 Polymorphism  
 Inheritance  

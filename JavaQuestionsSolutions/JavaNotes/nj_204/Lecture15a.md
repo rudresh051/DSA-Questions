@@ -294,3 +294,57 @@ class B extends A
 	}
 }
 ```
+
+### Example - Object class method
+
+```java
+public class Person {
+    String name;
+    int age;
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Override toString() method
+    @Override
+    public String toString() {
+        return "Person[name=" + name + ", age=" + age + "]";
+    }
+
+    // Override equals() method
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!(obj instanceof Person))
+            return false;
+        Person p = (Person) obj;
+        return this.name.equals(p.name) && this.age == p.age;
+    }
+
+    // Override hashCode() method
+    @Override
+    public int hashCode() {
+        return name.hashCode() + age;
+    }
+
+    public static void main(String[] args) {
+        Person p1 = new Person("John", 30);
+        Person p2 = new Person("John", 30);
+
+        // toString() - Automatically called when printing the object
+        System.out.println(p1);  // Output: Person[name=John, age=30]
+
+        // equals() - Compare object content
+        System.out.println(p1.equals(p2));  // Output: true
+
+        // getClass()
+        System.out.println(p1.getClass().getName());  // Output: Person
+
+        // hashCode()
+        System.out.println(p1.hashCode());  // Output: some hash int
+    }
+}
+```
