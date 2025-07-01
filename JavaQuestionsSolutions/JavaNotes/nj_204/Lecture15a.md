@@ -465,6 +465,35 @@ public class Main {
 | Flexibility     | Less flexible             | More flexible        |
 
 ### Example - 
+```java
+class A 
+{
+	int i=10;
+
+	void funA1(){
+		System.out.println("inside funA of A1");
+	}
+
+	void funA2(){
+		System.out.println("inside funA of A2");
+	}
+}
+```
+
+```java
+class B extends A
+{
+	public void funB(){
+		System.out.println("inside funB of B");
+	}
+
+
+	@Override
+	void funA1(){
+		System.out.println("inside funA! of B class");
+	}
+}
+```
 
 ```java
 class Demo 
@@ -498,6 +527,70 @@ class Demo
 		Demo d1 = new Demo();
 		//d1.fun1();
 		d1.fun1(5);
+	}
+}
+```
+
+### Example - 
+Conclusion - The method will be called from the parent, or the method will be called from the child(overridden method), it totally depend upon what the child class has overridden method or not. And it will be decided at runtime. That's why it's called runtime polymorphism
+
+practise -  
+
+```java
+class A 
+{
+	int i=10;
+
+	void funA1(){
+		System.out.println("inside funA1 A-clsss");
+	}
+
+	void funA2(){
+		System.out.println("inside funA2 A-class");
+	}
+}
+```
+
+```java
+class B extends A
+{
+	public void funB(){
+		System.out.println("inside funB of B-class");
+	}
+
+
+	@Override
+	void funA1(){
+		System.out.println("inside funA1 of B-class");
+	}
+}
+```
+
+```java
+class Demo 
+{
+	public void fun1(A a1){
+
+		// robust method
+		if(a1 !=null){
+			System.out.println("inside fun1 of Demo");
+			System.out.println("the value of a1 is" + " " + a1);
+			a1.funA1(); // funA1 is common in both Class A and Class B . which one will be called? Overridden will be called // this is called dynamic polymorphism
+			a1.funA2();
+		}
+		else{
+			System.out.println("Don't pass null value");
+		}
+	}
+
+
+
+	public static void main(String[] args) 
+	{
+		Demo d1 = new Demo();
+		//d1.fun1();
+		//d1.fun1(new A());
+		d1.fun1(new B());
 	}
 }
 ```
