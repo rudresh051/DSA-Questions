@@ -463,3 +463,41 @@ public class Main {
 | Resolution time | Compile time              | Runtime              |
 | Binding         | Early binding             | Late binding         |
 | Flexibility     | Less flexible             | More flexible        |
+
+### Example - 
+
+```java
+class Demo 
+{
+	public void fun1(A a1){
+
+		// robust method
+		if(a1 !=null){
+			System.out.println("inside fun1 of Demo");
+			System.out.println("the value of a1 is" + " " + a1);
+			a1.funA1(); // funA1 is common in both Class A and Class B . which one will be called? Overridden will be called // this is called dynamic polymorphism
+
+			a1.funA2();
+		}
+		else{
+			System.out.println("Don't pass null value");
+		}
+	}
+
+
+	public void fun1(){
+		System.out.println("inside fun1() of Demo");
+	}
+
+	public void fun1(int x){
+		System.out.println("inside fun1() of Demo here");
+	}
+
+	public static void main(String[] args) 
+	{
+		Demo d1 = new Demo();
+		//d1.fun1();
+		d1.fun1(5);
+	}
+}
+```
