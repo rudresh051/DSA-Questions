@@ -594,3 +594,30 @@ class Demo
 	}
 }
 ```
+
+Example - 
+```java
+class Demo 
+{
+	public void fun1(Object obj){
+
+		// robust method
+		if(obj !=null){
+			System.out.println("inside fun1 of Demo");
+			String s = obj.toString();// we can call this one
+			System.out.println(s);
+		}
+		else{
+			System.out.println("Don't pass null value");
+		}
+	}
+
+
+
+	public static void main(String[] args) 
+	{
+		Demo d1 = new Demo();
+		d1.fun1(new A());
+	}
+}
+```
