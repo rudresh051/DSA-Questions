@@ -662,3 +662,5 @@ class Demo
 	}
 }
 ```
+
+Note - If we print any class object, normally it should print the address of that object but instead of printing address, it print something else, then definitely that class has overridden `toString` method in it.
