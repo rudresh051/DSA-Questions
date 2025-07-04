@@ -621,3 +621,44 @@ class Demo
 	}
 }
 ```
+
+* println method belongs to java.io.PrintStream class
+  * there are multiple overloaded println method is there - 
+
+```java
+println(primitives){
+	// it simply print the value on the console
+}
+```
+
+```java
+println(String s){
+// it simply print the content of the String object
+}
+```
+
+```java
+println(Object obj){
+	String str = obj.toString();
+	println(str); // it will append to package and hashcode e.g. com.masai.Demo@626b2d4a
+}
+```
+
+* example - dynamic polymorphism
+
+```java
+class Demo 
+{
+	
+	@Override
+	public String toString(){
+		return "Welcom";
+	}
+
+	public static void main(String[] args) 
+	{
+		Demo d1 = new Demo();
+		System.out.print(d1);
+	}
+}
+```
