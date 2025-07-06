@@ -97,3 +97,37 @@ interface InterfaceName{
 // declare methods that is abstract by default.
 }
 ```
+### Example - 
+
+```java
+// Define an interface
+interface Animal {
+    void makeSound();        // abstract method
+    void eat();              // another abstract method
+}
+```
+
+```java
+// Dog class implements Animal interface
+class Dog implements Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog barks: Woof! Woof!");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Dog eats bones.");
+    }
+}
+```
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.makeSound();   // Output: Dog barks: Woof! Woof!
+        myDog.eat();         // Output: Dog eats bones.
+    }
+}
+```
