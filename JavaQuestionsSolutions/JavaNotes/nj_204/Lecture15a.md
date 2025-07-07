@@ -652,7 +652,7 @@ class Demo
 	
 	@Override
 	public String toString(){
-		return "Welcom";
+		return "Welcome";
 	}
 
 	public static void main(String[] args) 
@@ -664,3 +664,18 @@ class Demo
 ```
 
 Note - If we print any class object, normally it should print the address of that object but instead of printing address, it print something else, then definitely that class has overridden `toString` method in it.
+
+### Example
+com.masai.Demo@626b2d4a
+
+* Above is the default string representation of an object in Java, as returned by the `toString()` method from the Object class (if not overridden).
+
+* Structure
+  * <package>.<ClassName>@<hexadecimal_hashcode>
+
+* `com.masai.Demo` — the fully qualified class name, meaning:
+  * com.masai is the **package.**
+  * `Demo` is the **class.**
+* `@626b2d4a` — this is the **hexadecimal hash code** of the object.
+  * It's derived from Integer.toHexString(object.hashCode()).
+  * It's basically a unique identifier for that object during the current run of the JVM.
