@@ -720,7 +720,7 @@ abstract class A
 }
 ```
 * with an abstract class we can do whatever we can perform with a normal class except following 3 things:
-  * We cannot create object of an abstract class directly
+  * We cannot create object of an abstract class **directly**
   * Inside an abstract class, we can have an abstract method also.
   * Normal class can be final, where as abstract class can not be final.
 
@@ -735,5 +735,30 @@ Think abstract methods is like a **loan**
 
 * abstract method can not be static, private and final
 
+* In Java we have 3 type of valid structures are thre
+  * 1. Full implemented structure(normal or concrete class)
+  * 2. Partial implemented structure(abstract class)
+  * 3. Full unimplemented structure(interface)
 
+* We can define variables for all above 3 type of structures
+	* A a1 = ? (concrete class)
+    	* A a1 = new A()
+    	* A a1 = new AChild();
+    	* A a1 = null;
+	* Abs a2 = ?
+    	* Abs a2 = nw Abs(); // CE
+    	* Abs a2 = new AbsChild();
+    	* Abs a1 = null;
+	* Intr a3 = ?
+    	* Intr a3 = new Intr();
+    	* Intr a3 = new IntrImpl();
+	* What are possible values of above?
 
+* can abstract class can have a final method?
+	* yes it can have
+
+* A a1 = new B()
+	* super class reference child class object
+	* Animal a  = new Dog();
+	* by a1 which methods you are allowed to call?
+    	* Just see the left of a1 i.e. A i.e. all the method which present A class and overridden methods in B class. but specific method you are not allowed to call. In order to call you need to downcast. 
