@@ -707,5 +707,17 @@ Animal tommy = new Dog();
 * an abstract classs is also known as partially implemented structure. i.e. an abstract class can have concrete methods(methods with body) as well as an abstract method also.
 * abstract class can be a empty class also.
 
+```java
+abstract class A 
+{
+
+	void funA1(){
+		System.out.println("inside funA1 A-clsss");
+	}
+
+
+	public abstract void funB();
+}
+```
 
 
