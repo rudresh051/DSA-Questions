@@ -731,5 +731,9 @@ e.g. human being, vehicle, animal.
 
 **Rule** - If any class try to extend any abstract class then that child class must **override** all the abstract methods of that abstract class, otherwise we need to make that child class also as an abstract class.
 
+Think abstract methods is like a **loan**
+
+* abstract method can not be static, private and final
+
 
 
