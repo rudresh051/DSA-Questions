@@ -719,5 +719,17 @@ abstract class A
 	public abstract void funB();
 }
 ```
+* with an abstract class we can do whatever we can perform with a normal class except following 3 things:
+  * We cannot create object of an abstract class directly
+  * Inside an abstract class, we can have an abstract method also.
+  * Normal class can be final, where as abstract class can not be final.
+
+Note - final and abstract both can not be used at the same time. they are enemies.
+
+Note - An abstract class does not have any meaning until it is extended by the child class. i.e. abstract class meant to be inherited
+e.g. human being, vehicle, animal.
+
+**Rule** - If any class try to extend any abstract class then that child class must **override** all the abstract methods of that abstract class, otherwise we need to make that child class also as an abstract class.
+
 
 
