@@ -679,3 +679,33 @@ com.masai.Demo@626b2d4a
 * `@626b2d4a` — this is the **hexadecimal hash code** of the object.
   * It's derived from Integer.toHexString(object.hashCode()).
   * It's basically a unique identifier for that object during the current run of the JVM.
+
+## Abstract Class
+
+```
+abstract Animal
+
+eat()
+sleep()
+walk()
+abstract makeNoise()
+
+```
+
+* Animal
+  * Dog, Cat, Tiger, Lion
+  * "Is A" relationship
+
+Dog tommy = new Dog();  
+Animal tommy = new Dog();  
+
+`Animal tommy = new Animal();`  
+
+* To restrict the user that he can not create object of any class directly then we need to mark that class as an abstract class.
+
+* mark the class with keyword "abstract"
+* an abstract classs is also known as partially implemented structure. i.e. an abstract class can have concrete methods(methods with body) as well as an abstract method also.
+* abstract class can be a empty class also.
+
+
+
