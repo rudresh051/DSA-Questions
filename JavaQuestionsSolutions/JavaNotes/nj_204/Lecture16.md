@@ -131,3 +131,39 @@ public class Main {
     }
 }
 ```
+
+* It is full unimplemented structure in java.
+* Till jdk 1.7 interfaces use to contains only abstract methods and final variables.
+* from jdk 1.8 we can place method with body also inside an interface.
+
+X.java:
+
+```java
+package com.masai;
+
+public interface X {
+
+	public abstract void fun1();
+	
+	
+}
+```
+
+```java
+class A{
+
+}
+```
+A.java
+			          default constructor
+>javac A.java-----------compiler------------A.class
+
+>javac X.java -----java compiler----------> X.class
+
+--.class file will be genereted for an interface also.
+--constructor concept is not applicable with interface.
+
+Note: inside an interface if we define any unimplemented method, that method is bydefault "public and abstract " whether we mention it or not.
+
+
+--with the help of an interface we achive full abstraction.
