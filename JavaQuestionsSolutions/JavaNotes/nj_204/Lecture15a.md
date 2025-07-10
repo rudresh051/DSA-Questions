@@ -770,3 +770,14 @@ Think abstract methods is like a **loan**
 
 * Abstract class mean to be extended
   * Abstract class existence depend upon its child class
+
+* Question - Can I put some constructor in Abstract class?
+  * Ofcourse, we can put it.
+
+```java
+Abs a1 = ?
+
+//a1 = null
+//a1 = AbsChild();
+
+```

@@ -132,19 +132,19 @@ public class Main {
 }
 ```
 
-* It is full unimplemented structure in java.
+* It is **full unimplemented** structure in java.
 * Till jdk 1.7 interfaces use to contains only abstract methods and final variables.
 * from jdk 1.8 we can place method with body also inside an interface.
 
-X.java:
+
+### Example - 
+X.java 
 
 ```java
 package com.masai;
-
 public interface X {
-
+    // class name and interface should be capital letters
 	public abstract void fun1();
-	
 	
 }
 ```
