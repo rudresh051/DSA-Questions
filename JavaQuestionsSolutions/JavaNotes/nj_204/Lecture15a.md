@@ -682,6 +682,10 @@ com.masai.Demo@626b2d4a
 
 ## Abstract Class
 
+**Why I should create the create the abstract class?**
+Basically no body should be able to create object of that class
+
+
 ```
 abstract Animal
 
@@ -705,6 +709,7 @@ Animal tommy = new Dog();
 
 * mark the class with keyword "abstract"
 * an abstract classs is also known as partially implemented structure. i.e. an abstract class can have concrete methods(methods with body) as well as an abstract method also.
+* With the help of Abstract class we achieve partial abstraction
 * abstract class can be a empty class also.
 
 ```java
@@ -762,3 +767,6 @@ Think abstract methods is like a **loan**
 	* Animal a  = new Dog();
 	* by a1 which methods you are allowed to call?
     	* Just see the left of a1 i.e. A i.e. all the method which present A class and overridden methods in B class. but specific method you are not allowed to call. In order to call you need to downcast. 
+
+* Abstract class mean to be extended
+  * Abstract class existence depend upon its child class
