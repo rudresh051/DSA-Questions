@@ -5,7 +5,7 @@ Oracle corporation
 10 million developers world wide
 3 billion users
 
-Features -
+**Features** -
 
 1. Simple
 2. Object oriented
@@ -17,9 +17,9 @@ Features -
 
 Java comes in the form of 3 category
 
-1. JSE/J2SE - Java 2 standard edition / Core Edition => to develop desktop apps
-2. JEE/J2EE - Java 2 enterprise edition => for large apps
-3. JME/J2ME - Java 2 micro edition => For mobile apps
+1. **JSE/J2SE** - Java 2 standard edition / Core Edition => to develop desktop apps
+2. **JEE/J2EE** - Java 2 enterprise edition => for large apps
+3. **JME/J2ME** - Java 2 micro edition => For mobile apps
 
 * J2SE
   * It is an specification from Sun-microsystem
