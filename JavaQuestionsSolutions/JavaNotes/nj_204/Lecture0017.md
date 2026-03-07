@@ -1,4 +1,4 @@
-# lectures - 30927
+# lectures - 30927 | Notes
 
 * Abstract class
   * With the help of Abstract class we achieve partial abstraction
@@ -130,3 +130,45 @@ Note - We can define variable of any 3 valid structure like(concrete class, abst
   * Default has less visibility when compared with public
 
 ![alt text](image-17.png)
+
+---using implements keyword we also achieve IS-A relationship.  
+
+X x1 =new XImpl();  
+
+--all the rules of super class reff and child class obj is applicable here.  
+
+
+XImpl.java:  
+--------------
+```java
+package com.masai;
+
+public class Demo {
+	
+	
+	
+	public static void main(String[] args) {
+		
+	
+		X x1 =new XImpl();
+		
+		
+		x1.fun1();
+		x1.fun2();
+		
+		XImpl xx= (XImpl)x1; //downcasting interface variable into its implemented class object
+		
+		xx.fun3();
+		
+	}
+
+}
+```
+
+* Inside an interface, in addition to an abstract method we can also have variables
+* If we define any variable inside an interface, it will be by default "public static final" whether we mention it or not.
+* That variable must be initialized at time of declaration
+* Variable defined inside an interface can be accessed by the implementation class object also.
+
+
+
