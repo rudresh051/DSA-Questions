@@ -82,8 +82,8 @@ public interface X{
 
 - as we extends a class to another class, we can implement an interface inside a class.
 
-Rule -  
-an interface can be implemented by any class, but if a class implements an interface, then that class must override all the abstract method of that interface otherwise we need to make that implemented class as an abstract class.
+**Rule -**  
+an interface can be implemented by any class, but if a class implements an interface, then that class must **override all the abstract method** of that interface otherwise we need to **make that implemented class as an abstract class.**
 
 XImpl.java  
 
@@ -111,3 +111,22 @@ public class XImpl implements X {
 }
 
 ```
+Note - We can define **reference variable** of an interface also.  
+
+X x1 = ?  
+
+X x1 = new X(); // compile time error
+
+X x1 = new XImpl(); // OK any implementation class obj.  
+
+X x1 = null;
+
+Note - We can define variable of any 3 valid structure like(concrete class, abstract class, interface), but the object should be created only for the concrete class.  
+
+
+* Using implements keyword we also achieve IA-A relationship
+
+* If you are implementing an interface you cannot reduce the visibility of the method. You will study about access modifiers. By default if nothing is given it is default. so you need to explicitely mention public
+  * Default has less visibility when compared with public
+
+![alt text](image-17.png)
