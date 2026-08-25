@@ -11,6 +11,7 @@ public void funA() // method signature
 
 }
 ```
+
 * The method which is **having a method body** is known as **implemented or concrete method.**(at least zero body)
 * The method **without body** (only singnature will be there) is called as **unimplemened  method or abstract method.**
   * abstract keyword must be there in that method signature.

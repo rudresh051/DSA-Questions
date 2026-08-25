@@ -1,23 +1,42 @@
 # lectures - 30927 | Notes
 
-* Abstract class
+> Java is much more powerful than javascript
+> You should start thinking how do you write logic using Java for DSA
+> Start DSA with Java
+> We will start collection and Exception handling in next few lectures
+
+* **Abstract class**
   * With the help of Abstract class we achieve partial abstraction
 
-* Abstract method - Unimplemented method
+> We have seen two concepts previously
+
+* **Abstract class** - Object cannot be created
+* **Abstract method** - Unimplemented method
 * Abstract class mean to be extended.
   * > There is no meaning of abstract class until it is extended by child
-  * Abstract class existence depend upon its child class
+  * > Abstract class existence depend upon its child class
+
+> In Java we have 3 types of structure
 
 1. Full implemented structure(concrete class)
-2. Partial implemented structure(AC)
-3. Full unimplemented structure(interface)
+2. Partial implemented structure(Abstract Class)
+3. Full unimplemented structure(Interface)
 
-## Interface 
-- It is **full unimplemented structure** in java
-- till jdk 1.7 interfaces use to contains only abstract methods and final variables
-- from jdk 1.8 we can place method with body also inside an interface
+> And right now we are going to discuss about the Interface first.
+> What are rules regarding the interface
+> What we can do and what we cannot do.
+> Then what is the difference between interface and abstract class
+> Where interface is used in Java
+> Interface is extremely important conept in Java. You can say that it is the most important concept. Most important concept in Java is interface because in higher classes if you have hibernate, collection or your spring or any kind of other framework you will mostly see the interface. In JDBC interface only.
+> By the help of interface only then you can make your application loosly coupled
 
-first we will see for jdk 1.7  
+## Interface
+
+* It is **full unimplemented structure** in java
+* Till JDK 1.7 interfaces use to contains only abstract methods and final variables
+  * From JDK 1.8 we can place method with body also inside an interface
+
+first we will see for JDK 1.7  
 > how we create the interface
 
 ![alt text](image-14.png)
@@ -144,24 +163,13 @@ XImpl.java:
 package com.masai;
 
 public class Demo {
-	
-	
-	
 	public static void main(String[] args) {
-		
-	
 		X x1 =new XImpl();
-		
-		
 		x1.fun1();
 		x1.fun2();
-		
 		XImpl xx= (XImpl)x1; //downcasting interface variable into its implemented class object
-		
 		xx.fun3();
-		
 	}
-
 }
 ```
 
